@@ -14,7 +14,7 @@ import RTM from "../../../public/rtm.png";
 import Image, { StaticImageData } from "next/image";
 import { Link } from "@/lib/next-intl/navigation";
 import Button from "../shared/Button";
-//"new"
+//"new" ""
 type TimelineItemType = {
   title: string;
   description: string;
