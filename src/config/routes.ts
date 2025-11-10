@@ -1,7 +1,7 @@
 const routes = {
   index: "/",
-  about: "/about",
-  contact: "/contact",
+  about: "#about",
+  contact: "#contact",
   signIn: "/signin",
   signUp: "/signup",
   verify: (id: string, code: string) => `/verify/${id}/${code}`,

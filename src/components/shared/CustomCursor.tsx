@@ -15,7 +15,20 @@ export default function CustomCursor() {
     };
   }, []);
 
-  const isMobile = width <= 768;
+  function isMobileDevice() {
+    const isMobileUA =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+
+    const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const lacksHover = !window.matchMedia("(hover: hover)").matches;
+
+    return isMobileUA || (hasTouch && (isCoarsePointer || lacksHover));
+  }
+
+  const isMobile = isMobileDevice();
 
   return (
     <>

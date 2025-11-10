@@ -13,7 +13,7 @@ export default function Header() {
         <MdNavigation />
         <div className="flex items-center gap-4">
           {/* <LanguageSwitcher /> */}
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </div>
         <SmNavigation />
       </div>
