@@ -7,6 +7,7 @@ import {
   Toolkit,
 } from "@/components/site/Sections";
 import { Terminus } from "@/components/site/Terminus";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { LINES } from "@/content/network";
 
 type PageProps = { params: Promise<{ locale: string }> };
@@ -27,6 +28,7 @@ export default async function Home({ params }: PageProps) {
         <Toolkit />
       </main>
       <Terminus />
+      <WhatsAppButton />
     </>
   );
 }

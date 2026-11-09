@@ -6,6 +6,7 @@
     "skip": "Skip to the work",
     "cv": "CV",
     "email": "Email",
+    "whatsapp": "Contact me on WhatsApp",
     "linesNav": "Projects",
     "lineLabel": "Project {number}: {name}",
     "switchLabel": "Read this page in Arabic",
@@ -15,7 +16,7 @@
     "headline": "Hamza Alhaj",
     "role": "Full-stack developer",
     "body": "I build online stores, business software, and systems for Saudi e-invoicing and medicine tracking.",
-    "email": "Email me",
+    "contact": "Contact me",
     "cv": "Download CV",
     "mapLabel": "A map of eight software projects. Each line is a project. The projects are listed after the map.",
     "keyLabel": "Projects"

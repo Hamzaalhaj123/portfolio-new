@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { FaWhatsapp } from "react-icons/fa";
 import { CONTACT } from "@/content/cases";
 import { LINES, type LineId } from "@/content/network";
 import { NetworkMap } from "./NetworkMap";
@@ -12,6 +13,7 @@ const REST_MS = 2600;
 export function HeroStage() {
   const t = useTranslations("Hero");
   const tKey = useTranslations("Key");
+  const tSite = useTranslations("Site");
   const locale = useLocale() as "en" | "ar";
   const rtl = locale === "ar";
 
@@ -95,10 +97,15 @@ export function HeroStage() {
             <p>{t("body")}</p>
             <div className="flex flex-col items-stretch gap-2 lg:flex-row lg:items-center lg:gap-3">
               <a
-                href={`mailto:${CONTACT.email}`}
-                className="inline-flex min-h-11 items-center justify-center bg-ink px-5 py-2 font-semibold text-white transition-colors hover:bg-[#D9202F]"
+                id="hero-contact"
+                href={CONTACT.whatsapp}
+                target="_blank"
+                rel="noopener"
+                aria-label={tSite("whatsapp")}
+                className="inline-flex min-h-11 items-center justify-center gap-2 bg-ink px-5 py-2 font-semibold text-white transition-colors hover:bg-[#D9202F]"
               >
-                {t("email")}
+                <FaWhatsapp aria-hidden className="h-5 w-5 flex-none" />
+                {t("contact")}
               </a>
               <a
                 href={CONTACT.cv}

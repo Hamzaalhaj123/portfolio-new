@@ -236,7 +236,7 @@ Inside a section, the pair is exposed as the `--line` and `--on-line` custom pro
 
 ### Named Rules
 
-**The One Colour Per System Rule.** A line colour identifies one project. Do not use it to decorate another project's content. Two global hovers borrow from the set and are the only exceptions: the hero Email action fills with Line 1 red, and links and the submit button on the ink ground turn Line 4 orange.
+**The One Colour Per System Rule.** A line colour identifies one project. Do not use it to decorate another project's content. Two global hovers borrow from the set and are the only exceptions: the hero Contact action and the floating WhatsApp button fill with Line 1 red, and links and the submit button on the ink ground turn Line 4 orange.
 
 **The Paired On-Colour Rule.** A line colour never appears behind text without its own on-colour. Orange takes the dark on-colour and is never used for text on white.
 
@@ -300,6 +300,7 @@ This system is flat. There are no cast shadows and no blur. Depth is expressed b
 - **Screenshot frame** (`box-shadow: 0 0 0 1.5px #15171c`): The ink hairline around every screenshot.
 - **Screenshot frame, hover** (`box-shadow: 0 0 0 4px var(--line)`): Thickens to the current line colour on linked screenshots.
 - **Outline button** (`box-shadow: inset 0 0 0 2px #15171c`): The secondary action's border.
+- **Floating WhatsApp** (`box-shadow: 0 0 0 2px #fff`): Keeps the ink square visible on the ink ground.
 - **Current line bullet** (`box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--line)`): Marks the case study currently in view in the header.
 
 ### Named Rules
@@ -359,6 +360,7 @@ A linear map of one system. A 6px rail in Rule with a line-coloured fill, vertic
 - **Line action:** the section's line colour with its on-colour; drops to 0.85 opacity on hover.
 - **On ink:** white with ink text; turns Line 4 orange on hover.
 - **Focus:** a 3px outline in the current text colour at 3px offset, applied globally.
+- **Floating WhatsApp:** a 56px square in ink with the white WhatsApp mark and a 2px white ring that separates it from the ink ground, fixed to the bottom corner on the reading-end side. It stays ink rather than WhatsApp green, because a ninth colour would read as a line. It stays hidden while the hero's Contact action is on screen, and its focus outline sits inside the square so it shows on both grounds.
 
 ### Inputs / Fields
 
