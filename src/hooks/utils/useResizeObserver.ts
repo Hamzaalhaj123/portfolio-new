@@ -32,8 +32,8 @@ function extractSize(entry: ResizeObserverEntry, box: BoxSizesKey, sizeType: key
 
   return Array.isArray(entry[box])
     ? entry[box][0][sizeType]
-    : // @ts-ignore Support Firefox's non-standard behavior
-      (entry[box][sizeType] as number);
+    : // Support older Firefox versions that expose a single size object.
+      (entry[box] as unknown as ResizeObserverSize)[sizeType];
 }
 
 export default function useResizeObserver<T extends HTMLElement = HTMLElement>(options: UseResizeObserverOptions<T>): Size {

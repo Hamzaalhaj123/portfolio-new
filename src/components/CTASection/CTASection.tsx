@@ -12,9 +12,9 @@ export const CTASection = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let's create something amazing! Whether you need a modern web
+            Let&apos;s create something amazing! Whether you need a modern web
             application, a stunning portfolio, or a performant e-commerce
-            solution - I'm ready to bring your vision to life.
+            solution - I&apos;m ready to bring your vision to life.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -39,7 +39,7 @@ export const CTASection = () => {
               window.location.href = "#contact";
             }}
           >
-            Let's Connect
+            Let&apos;s Connect
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

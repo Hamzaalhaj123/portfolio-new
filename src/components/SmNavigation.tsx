@@ -4,7 +4,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/DropdownMenu";
+} from "./shared/DropdownMenu";
+import navigation from "@/config/navigation";
+import { Link } from "@/lib/next-intl/navigation";
 
 export default function SmNavigation() {
   return (
@@ -14,7 +16,7 @@ export default function SmNavigation() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="z-50">
         {navigation.map(({ title, href }) => (
-          <DropdownMenuItem key={title}></DropdownMenuItem>
+          <DropdownMenuItem key={title}><Link href={href}>{title}</Link></DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>

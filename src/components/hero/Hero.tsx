@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import personalPic from "@/../public/personal picture.png";
-import Button from "../shared/Button";
 import { Link } from "@/lib/next-intl/navigation";
 import {
   Github,
@@ -9,7 +8,6 @@ import {
   Download,
   MessageSquare,
   ArrowRight,
-  ArrowRightFromLine,
 } from "lucide-react";
 import { About } from "../about/About";
 

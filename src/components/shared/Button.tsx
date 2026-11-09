@@ -112,7 +112,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || isLoading}
         {...props}
       >
-        {asChild && React.isValidElement(children) ? (
+        {asChild && React.isValidElement<{ children?: React.ReactNode }>(children) ? (
           React.cloneElement(
             children,
             {},

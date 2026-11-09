@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useTransition } from "react";
 import { toast } from "sonner";
 export type ServerActionResponse = { success: boolean; message: string };
 
-export default function useServerAction<P extends any[], R extends ServerActionResponse>(
+export default function useServerAction<P extends unknown[], R extends ServerActionResponse>(
   action: (...args: P) => Promise<R>,
   onFinished?: (_: R | undefined) => void,
   loadingLabel ?: string,
@@ -12,7 +12,7 @@ export default function useServerAction<P extends any[], R extends ServerActionR
   const t = useTranslations("GENERAL");
   const [result, setResult] = useState<R>();
   const [finished, setFinished] = useState(false);
-  const resolver = useRef<(value?: R | PromiseLike<R>) => void>();
+  const resolver = useRef<((value?: R | PromiseLike<R>) => void) | undefined>(undefined);
 
   useEffect(() => {
     if (!finished) return;

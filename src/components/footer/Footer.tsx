@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Linkedin, Github, Mail, Twitter, ArrowRight } from "lucide-react";
-import { cva } from "class-variance-authority";
 import Button from "../shared/Button";
 
 export const Footer = () => {
@@ -55,7 +54,7 @@ export const Footer = () => {
           {/* CTA */}
           <div className="space-y-2">
             <h4 className="text-sm font-semibold text-foreground">
-              Let's Build
+              Let&apos;s Build
             </h4>
             <Button asChild variant="muted">
               <Link href="#contact">

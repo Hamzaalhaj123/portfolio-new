@@ -17,7 +17,7 @@ export default function useSetSearchParams() {
           ) => Record<string, string>),
       method: "replace" | "push" = "replace",
       useHistoryObject: boolean = false,
-      state: any = null,
+      state: unknown = null,
     ) => {
       let newSearchParams: URLSearchParams;
       if (typeof params === "function") {

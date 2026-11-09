@@ -1,5 +1,4 @@
 import { ButtonVariants, buttonVariants } from "@/components/shared/Button";
-import Directional from "@/components/utils/Directional";
 import { Link } from "@/lib/next-intl/navigation";
 import cn from "@/utils/cn";
 import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react";
@@ -42,19 +41,19 @@ const PaginationLink = ({ className, isActive, ...props }: PaginationLinkProps) 
 PaginationLink.displayName = "PaginationLink";
 
 const PaginationPrevious = ({ className, ...props }: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink aria-label="Go to previous page" {...props}>
-    <Directional>
+  <PaginationLink aria-label="Go to previous page" className={className} {...props}>
+    <span className="inline-flex rtl:rotate-180">
       <ChevronLeftIcon className="size-4" />
-    </Directional>
+    </span>
   </PaginationLink>
 );
 PaginationPrevious.displayName = "PaginationPrevious";
 
 const PaginationNext = ({ className, ...props }: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink aria-label="Go to next page" {...props}>
-    <Directional>
+  <PaginationLink aria-label="Go to next page" className={className} {...props}>
+    <span className="inline-flex rtl:rotate-180">
       <ChevronRightIcon className="size-4" />
-    </Directional>
+    </span>
   </PaginationLink>
 );
 PaginationNext.displayName = "PaginationNext";

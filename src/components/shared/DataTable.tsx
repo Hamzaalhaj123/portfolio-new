@@ -1,6 +1,5 @@
 "use client";
 
-import { PaginatedQueryResult } from "@/actions/utils/getPaginatedQuery";
 import PaginationGroup from "@/components/shared/PaginationGroup";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/shared/table";
 import {
@@ -17,7 +16,11 @@ import { useState } from "react";
 type DataTableProps<TData, TValue> = {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  paginationMetadata?: PaginatedQueryResult<unknown>["metaData"];
+  paginationMetadata?: {
+    totalCount: number;
+    pageCount: number;
+    page: number;
+  };
 };
 
 export default function DataTable<TData, TValue>({ columns, data, paginationMetadata }: DataTableProps<TData, TValue>) {

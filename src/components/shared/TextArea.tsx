@@ -3,7 +3,7 @@
 import cn from "@/utils/cn";
 import { FormEvent, forwardRef, KeyboardEvent, useCallback } from "react";
 
-export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({ className, ...props }, ref) => {
   const handleResize = useCallback((e: FormEvent<HTMLTextAreaElement>) => {

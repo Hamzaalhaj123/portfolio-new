@@ -63,7 +63,7 @@ export const ContactForm = () => {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (error) {
+    } catch {
       setErrorMessage("Failed to send message. Please try again.");
       setTimeout(() => setErrorMessage(""), 5000);
     } finally {
@@ -81,7 +81,7 @@ export const ContactForm = () => {
           Get in Touch
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Have a project in mind? Let's make it happen!
+          Have a project in mind? Let&apos;s make it happen!
         </p>
       </div>
 
@@ -147,7 +147,7 @@ export const ContactForm = () => {
                 <FormControl>
                   <Textarea
                     {...field}
-                    placeholder="Let's build something amazing!"
+                    placeholder="Let&apos;s build something amazing!"
                     className="min-h-[120px]"
                     disabled={loading}
                   />

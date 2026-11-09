@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 export default function CustomCursor() {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
+  const [isMobile, setIsMobile] = useState(true);
   useEffect(() => {
+    function handleWindowSizeChange() {
+      setIsMobile(isMobileDevice());
+    }
+    handleWindowSizeChange();
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
@@ -27,8 +27,6 @@ export default function CustomCursor() {
 
     return isMobileUA || (hasTouch && (isCoarsePointer || lacksHover));
   }
-
-  const isMobile = isMobileDevice();
 
   return (
     <>

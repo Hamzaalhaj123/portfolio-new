@@ -16,17 +16,17 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }>;
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: RootLayoutProps) {
-  const theme = getTheme();
-  console.log(theme);
+  const { locale } = await params;
+  const theme = await getTheme();
   const dir = getLangDir(locale);
   const messages = await getMessages();
 

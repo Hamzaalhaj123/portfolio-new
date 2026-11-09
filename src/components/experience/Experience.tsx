@@ -1,7 +1,6 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import AnimatedCursor from "react-animated-cursor";
 import {
   SiReact,
   SiNextdotjs,
@@ -19,18 +18,8 @@ const techItems = [
 const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const posRef = useRef({ x: 0, y: 0 });
-  const lastPosRef = useRef({ x: 0, y: 0 });
   const velocityRef = useRef(0);
 
-  const calculateTilt = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-  };
 
   return (
     <div
@@ -40,7 +29,6 @@ const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
         setIsHovered(false);
         setRotate({ x: 0, y: 0 });
       }}
-      onMouseMove={calculateTilt}
     >
       <motion.div
         className="p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center h-full cursor-none"
@@ -88,7 +76,6 @@ const TechCard = ({ icon, name }: { icon: React.ReactNode; name: string }) => {
 };
 
 export default function Experience() {
-  const [globalHover, setGlobalHover] = useState(false);
 
   return (
     <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -98,8 +85,6 @@ export default function Experience() {
 
       <div
         className="grid grid-cols-2 md:grid-cols-4 gap-8"
-        onMouseEnter={() => setGlobalHover(true)}
-        onMouseLeave={() => setGlobalHover(false)}
       >
         {techItems.map((item) => (
           <TechCard key={item.name} {...item} />

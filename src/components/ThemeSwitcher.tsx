@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/Select";
+} from "./shared/Select";
 export default function ThemeSwitcher() {
   const t = useTranslations("THEMESWITCHER");
   const [theme, handleSwitch] = useTheme();

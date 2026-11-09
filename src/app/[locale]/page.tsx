@@ -3,7 +3,6 @@ import { ContactForm } from "@/components/contactMe/ContactMe";
 import { CTASection } from "@/components/CTASection/CTASection";
 import Experience from "@/components/experience/Experience";
 import { Footer } from "@/components/footer/Footer";
-import MdNavigation from "@/components/header/MdNavigation";
 import Hero from "@/components/hero/Hero";
 import { Timeline } from "@/components/timeline/Timeline";
 

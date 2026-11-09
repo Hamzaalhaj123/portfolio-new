@@ -198,7 +198,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
         ref={ref}
         variant={variant}
         size={size}
-        icon={true}
+        icon={icon}
         className={cn(
           "absolute size-8 rounded-full",
           orientation === "horizontal" ? "-end-12 top-1/2 -translate-y-1/2" : "-bottom-12 start-1/2 rotate-90 -translate-s-1/2",
