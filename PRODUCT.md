@@ -40,11 +40,12 @@ Visitors compare this page against CVs and other candidates. Much of the best wo
 
 ## Evidence on Hand
 
-- Case studies with real copy and screenshots in `public/case-studies/` and the project list previously in `src/components/timeline/Timeline.tsx`: Aleef Care, Strata by GameReplays, Raneem Gifts, Retail Pro → ZATCA, Prism → SFDA RSD, Occasion, RTM Accounting for Odoo.
+- Case studies with real copy and screenshots in `public/case-studies/` and the project list previously in `src/components/timeline/Timeline.tsx`: Aleef Care, Strata by GameReplays, Raneem Gifts, Retail Pro → ZATCA, Prism → SFDA RSD, Occasion, RTM Accounting for Odoo, Webloom.
+- Webloom: his university graduation project, "An AI-Assisted Visual Website Builder for Personal Websites". The live site is webloom-iota.vercel.app; the source repository is private, so do not link it. No user numbers or evaluation results exist; do not claim any.
 - Earlier work: RTM Solutions landing page, Bohr model 3D visualization (university research, 2023), Mueen school management, DataPower landing page.
 - Hindam: his own marketplace SaaS, third place in a local startup competition. No screenshots on hand.
 - Reported figures: Strata has processed 2.1M+ matches from 48,000+ players and saw 954 concurrent users in October 2026. Aleef Care reports 10,000+ completed sessions, 5,000 happy pets and 50+ expert trainers.
-- Attribution to keep: Strata was built with the GameReplays team. Raneem, ZATCA, SFDA and RTM Accounting are private and shown with demo or sample data. Occasion is private; its source note does not say whether its screens use sample data, so do not claim either way.
+- Attribution to keep: Strata was built with the GameReplays team. Raneem, ZATCA, SFDA and RTM Accounting are private and shown with demo or sample data. The Webloom screens use his own sample portfolio. Occasion is private; its source note does not say whether its screens use sample data, so do not claim either way.
 - CV at `public/cv.pdf`: RTM Solutions, Saudi Arabia, Software Developer, 2025–present; contract freelancer for a technology company in Damascus (electricity-provider workflow dashboard); Data Power, Saudi Arabia, remote, 2022; Mobadroon community, 2023.
 - Portrait: `public/personal picture.png`.
 - Contact: hamzaalhaj987@gmail.com, +963 934 985 349 (WhatsApp), linkedin.com/in/hamza-alhaj-a7867923b, github.com/Hamzaalhaj123.

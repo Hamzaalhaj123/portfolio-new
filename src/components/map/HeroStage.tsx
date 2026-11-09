@@ -113,11 +113,11 @@ export function HeroStage() {
       </div>
 
       <nav aria-label={t("keyLabel")} className="border-y-2 border-ink">
-        <ol className="grid lg:grid-cols-7">
+        <ol className="key-grid">
           {LINES.map((line) => (
             <li
               key={line.id}
-              className="border-rule max-lg:border-b max-lg:last:border-b-0 lg:border-s lg:first:border-s-0"
+              className="key-item"
               style={
                 {
                   "--line": line.color,

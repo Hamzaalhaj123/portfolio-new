@@ -7,7 +7,7 @@ const SPACING = 40;
 const CENTER = 400;
 const TERMINUS_Y = 280;
 
-/** Seven lines run down into one station. */
+/** Every line runs down into one station. */
 function Converge() {
   const mid = (LINES.length - 1) / 2;
   return (

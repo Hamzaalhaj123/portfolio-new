@@ -17,7 +17,7 @@
     "body": "I build online stores, business software, and systems for Saudi e-invoicing and medicine tracking.",
     "email": "Email me",
     "cv": "Download CV",
-    "mapLabel": "A map of seven software projects. Each line is a project. The projects are listed after the map.",
+    "mapLabel": "A map of eight software projects. Each line is a project. The projects are listed after the map.",
     "keyLabel": "Projects"
   },
   "Key": {
@@ -27,7 +27,8 @@
     "strata": "Strata",
     "aleef": "Aleef Care",
     "occasion": "Occasion",
-    "rtm": "RTM Accounting"
+    "rtm": "RTM Accounting",
+    "webloom": "Webloom"
   },
   "Stations": {
     "prism": "Retail Pro Prism",
@@ -76,7 +77,17 @@
     "invoice": "Invoice",
     "bank": "Bank match",
     "reports": "Reports",
-    "pickupShort": "Document"
+    "pickupShort": "Document",
+    "brief": "Website brief",
+    "proposal": "AI proposal",
+    "validate": "Validate",
+    "approve": "Your review",
+    "editor": "Visual editor",
+    "preview": "Preview",
+    "publish": "Publish",
+    "rejected": "Rejected",
+    "conflict": "Save conflict",
+    "stale": "Out of date"
   },
   "Case": {
     "stops": "How it works",
@@ -138,6 +149,9 @@
       "note": "Private project, shown with demo data",
       "shots": [
         "Raneem Gifts storefront home page",
+        "Bouquet builder with a live price",
+        "Buying a gift card and choosing its design",
+        "Subscription plans for weekly flowers",
         "Operations console showing the work due today",
         "Operations console order list",
         "Driver app task board",
@@ -187,6 +201,9 @@
       "note": "Private project",
       "shots": [
         "Occasion product catalog",
+        "Category tiles on the Occasion home page",
+        "A row of flower products",
+        "Quick view of a product",
         "Occasion product page",
         "Personalized gift card editor",
         "Arabic catalog on a phone"
@@ -205,6 +222,29 @@
         "Financial overview dashboard",
         "Accounting reports menu",
         "Workspace app launcher"
+      ]
+    },
+    "webloom": {
+      "statement": "An AI-assisted visual website builder.",
+      "lead": "My graduation project. Describe a personal website and the AI proposes changes to a structured design. You review them, refine the result in a visual editor, then export readable Next.js code or publish it to Vercel.",
+      "highlights": [
+        { "label": "AI", "detail": "Validated design changes from OpenAI, Gemini or OpenCode, using your own key" },
+        { "label": "Editor", "detail": "Drag and drop, desktop, tablet and mobile views, undo and autosave" },
+        { "label": "Export", "detail": "Readable Next.js source in a ZIP, with no Webloom runtime" },
+        { "label": "Security", "detail": "Argon2 passwords, AES-256-GCM for saved keys, and ownership checks" },
+        { "label": "Uploads", "detail": "Checked, size-limited files stored in PostgreSQL" }
+      ],
+      "note": "University graduation project",
+      "branches": {
+        "rejected": "A proposal that fails validation is never shown or applied.",
+        "conflict": "An out-of-date save is refused, so it can't overwrite newer work.",
+        "stale": "A preview can only go live while it matches the latest saved version."
+      },
+      "shots": [
+        "Webloom's Project Studio generating a site from a brief",
+        "The guided website brief",
+        "Editing the mobile layout",
+        "The editor reporting a save conflict"
       ]
     }
   },

@@ -16,6 +16,8 @@ colors:
   line-purple-on: "#FFFFFF"
   line-brown: "#8A5A2B"
   line-brown-on: "#FFFFFF"
+  line-teal: "#007A8C"
+  line-teal-on: "#FFFFFF"
   ink: "#15171c"
   mute: "#5c616b"
   rule: "#dcdee3"
@@ -178,6 +180,11 @@ components:
     textColor: "{colors.line-brown-on}"
     rounded: "{rounded.full}"
     size: "1.75em"
+  line-bullet-8:
+    backgroundColor: "{colors.line-teal}"
+    textColor: "{colors.line-teal-on}"
+    rounded: "{rounded.full}"
+    size: "1.75em"
 ---
 
 # Design System: Hamza Alhaj Portfolio
@@ -188,12 +195,12 @@ components:
 
 The page is a printed transit sheet. Each project is a line in a full-saturation colour, each stop is a real step in that system, and each dotted branch is a real failure path. Everything else exists to read that network: near-black ink on a white enamel sheet, heavy grotesque type, hairline rules instead of containers, and square-framed screenshots as the only imagery of the work.
 
-The density changes on purpose. The first viewport is one diagram edge to edge, then each line takes over the full width as a solid colour band, then the system narrows to ruled rows and strip diagrams for the detail. The page ends on the only ink ground in the system, where all seven lines run down into one terminus.
+The density changes on purpose. The first viewport is one diagram edge to edge, then each line takes over the full width as a solid colour band, then the system narrows to ruled rows and strip diagrams for the detail. The page ends on the only ink ground in the system, where all eight lines run down into one terminus.
 
 Arabic and English are equal readings of one sheet. The map mirrors so that trains run in reading direction, the layout uses logical properties throughout, and the bilingual station sign holds both scripts in every locale.
 
 **Key Characteristics:**
-- One white sheet, one near-black ink, seven line colours that own whole bands.
+- One white sheet, one near-black ink, eight line colours that own whole bands.
 - A single map geometry, authored once on a grid and derived for right-to-left and portrait.
 - A fixed station grammar: station, interchange, terminus, dotted failure branch, numbered bullet.
 - Flat surfaces, square rectangles, circles reserved for the network.
@@ -201,11 +208,11 @@ Arabic and English are equal readings of one sheet. The map mirrors so that trai
 
 ## Colors
 
-Seven transit colours at full saturation over a neutral sheet; no gradients and no tinted surfaces.
+Eight transit colours at full saturation over a neutral sheet; no gradients and no tinted surfaces.
 
 ### Primary
 
-The seven line colours are the primary palette. Each identifies one system across its band, bullet, stops, rail and section action.
+The eight line colours are the primary palette. Each identifies one system across its band, bullet, stops, rail and section action.
 
 - **Line 1 Signal Red** (#D9202F, on #FFFFFF): Retail Pro to ZATCA.
 - **Line 2 Network Blue** (#0A5BC4, on #FFFFFF): Prism to SFDA RSD.
@@ -214,6 +221,7 @@ The seven line colours are the primary palette. Each identifies one system acros
 - **Line 5 Depot Green** (#007F49, on #FFFFFF): Aleef Care.
 - **Line 6 Express Purple** (#6C2DB3, on #FFFFFF): Occasion.
 - **Line 7 Freight Brown** (#8A5A2B, on #FFFFFF): RTM Accounting for Odoo.
+- **Line 8 Loom Teal** (#007A8C, on #FFFFFF): Webloom, the graduation project.
 
 Inside a section, the pair is exposed as the `--line` and `--on-line` custom properties and every component reads those two names. The career route binds the same pair to ink and white, so it renders as an uncoloured line using the same parts.
 
@@ -271,11 +279,11 @@ The page is one fluid column capped at 1520px with a gutter of clamp(16px, 3.2vw
 
 **The map grid.** The network is defined on a sheet of 40 by 21.5 units at 40px per unit, giving 1600 by 860. Stops and bends live on this grid. Line segments run at 0, 45 or 90 degrees, with corners softened to a radius of 16 (12 on branches).
 
-**Fitting the first viewport.** From 1024px the stage is a size container, its width capped at the height left under the header and line key, multiplied by the sheet ratio (1.86), and never smaller than 960px. The headline, sentence and actions are positioned in the map's clearing in cqw units, so they keep their relationship to the network at any size. The seven-column line key sits directly below.
+**Fitting the first viewport.** From 1024px the stage is a size container, its width capped at the height left under the header and line key, multiplied by the sheet ratio (1.86), and never smaller than 960px. The headline, sentence and actions are positioned in the map's clearing in cqw units, so they keep their relationship to the network at any size. The line key sits directly below.
 
 **Portrait.** Below 1024px the map transposes (x and y swap) and thickens: line 11 against 8, station radius 6.5 against 5, interchange 15 against 12, terminus 12 against 9.5, bullet 25 against 16. Portrait maps carry no station labels, and the line key stacks into a full list beneath the diagram.
 
-**Case studies.** Each line opens with a full-bleed band. Its lead screenshot takes eight columns and is pulled up over the band by clamp(72px, 13vw, 220px); the lead paragraph takes the other four. The pairing swaps sides on every second line. Gallery screenshots share a row and size by aspect ratio from 768px, and scroll horizontally below it.
+**Case studies.** Each line opens with a full-bleed band. Its lead screenshot takes eight columns and is pulled up over the band by clamp(72px, 13vw, 220px); the lead paragraph takes the other four. The pairing swaps sides on every second line. From 768px gallery screenshots fill justified rows, sized by aspect ratio and wrapping once a row's ratios would add up to more than 5.4. Below 768px they scroll horizontally.
 
 ### Named Rules
 
@@ -358,11 +366,11 @@ Underlined fields exist only on the ink ground. Transparent, white text, a 2px b
 
 ### Navigation
 
-A sticky 56px header on white with a 2px ink rule. The name is set at 17px bold on the reading-start side, the seven line bullets sit in the middle from 1024px once the hero has scrolled away, and Email, CV and the language switch sit at the end at 15px, weight 600, underlining on hover. The language switch is written in the other language's own script. The bullet for the case study in view gets the double ring.
+A sticky 56px header on white with a 2px ink rule. The name is set at 17px bold on the reading-start side, the eight line bullets sit in the middle from 1024px once the hero has scrolled away, and Email, CV and the language switch sit at the end at 15px, weight 600, underlining on hover. The language switch is written in the other language's own script. The bullet for the case study in view gets the double ring.
 
 ### Line Key
 
-The seven-part index beneath the map, between two 2px ink rules: seven columns from 1024px, a stacked list below. Each entry is a bullet and one short plain name at 15px weight 600. Hovering, focusing or the auto-cycle fills the entry with its line colour and inverts the bullet.
+The eight-part index beneath the map, between two 2px ink rules: eight columns from 1280px, two rows of four from 1024px, a stacked list below. Each entry is a bullet and one short plain name at 15px weight 600. Hovering, focusing or the auto-cycle fills the entry with its line colour and inverts the bullet.
 
 ### Ruled Rows
 
@@ -374,7 +382,7 @@ Real product screens at their native ratio with square corners and the 1.5px ink
 
 ### Terminus
 
-The ending. On the ink ground, seven parallel 10-unit lines bend into a single white-ringed ink station above the display title, followed by the email at clamp(23px, 4vw, 64px) as the largest link on the page, then the contact form.
+The ending. On the ink ground, eight parallel 10-unit lines bend into a single white-ringed ink station above the display title, followed by the email at clamp(23px, 4vw, 64px) as the largest link on the page, then the contact form.
 
 ## Do's and Don'ts
 

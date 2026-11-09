@@ -7,6 +7,27 @@ import { StripFill } from "./StripFill";
 
 type Highlight = { label: string; detail: string };
 
+/** Widest a gallery row may get, as the sum of its screenshots' aspect ratios. */
+const MAX_ROW_RATIO = 5.4;
+
+/** Splits screenshots into rows, and gives each its share of its row's width. */
+function galleryLayout(ratios: number[]) {
+  const rows: number[][] = [];
+  for (const ratio of ratios) {
+    const row = rows[rows.length - 1];
+    const sum = row?.reduce((total, r) => total + r, 0) ?? 0;
+    if (row && sum + ratio <= MAX_ROW_RATIO) row.push(ratio);
+    else rows.push([ratio]);
+  }
+  return rows.flatMap((row) => {
+    const sum = row.reduce((total, r) => total + r, 0);
+    return row.map((ratio) => ({
+      share: (ratio / sum).toFixed(4),
+      inRow: row.length,
+    }));
+  });
+}
+
 export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
   const t = useTranslations(`Cases.${line.id}`);
   const tCase = useTranslations("Case");
@@ -23,6 +44,7 @@ export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
   const titleId = `line-${line.number}-title`;
   const branches = line.branches ?? [];
   const exceptionStops = new Set(branches.map((b) => b.from));
+  const galleryRows = galleryLayout(gallery.map((s) => s.width / s.height));
 
   return (
     <section
@@ -204,6 +226,8 @@ export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
                   style={
                     {
                       "--r": (shot.width / shot.height).toFixed(4),
+                      "--share": galleryRows[index].share,
+                      "--in-row": galleryRows[index].inRow,
                     } as React.CSSProperties
                   }
                 >

@@ -13,7 +13,8 @@ export type LineId =
   | "strata"
   | "aleef"
   | "occasion"
-  | "rtm";
+  | "rtm"
+  | "webloom";
 
 export type Stop = {
   id: string;
@@ -255,6 +256,65 @@ export const LINES: readonly Line[] = [
       { id: "reports", at: [34, 7], side: "n", terminus: true },
     ],
     bulletAt: [17.05, 1.5],
+  },
+  {
+    id: "webloom",
+    number: 8,
+    color: "#007A8C",
+    onColor: "#FFFFFF",
+    names: { en: "Webloom: Graduation Project", ar: "Webloom: مشروع التخرج" },
+    path: [
+      [38.5, 16.5],
+      [38.5, 1.5],
+      [31.5, 1.5],
+      [26, 7],
+    ],
+    stops: [
+      { id: "brief", at: [38.5, 16.5], side: "w", terminus: true },
+      { id: "proposal", at: [38.5, 12.5], side: "w" },
+      { id: "validate", at: [38.5, 8.5], side: "w" },
+      { id: "approve", at: [38.5, 4.5], side: "w" },
+      { id: "editor", at: [34.5, 1.5], side: "n" },
+      { id: "postgres", at: [29, 4], side: "sw" },
+      { id: "preview", at: [27.5, 5.5], side: "w" },
+      { id: "publish", at: [26, 7], side: "s", terminus: true },
+    ],
+    branches: [
+      {
+        id: "rejected",
+        kind: "hold",
+        from: "validate",
+        path: [
+          [38.5, 8.5],
+          [37.5, 7.5],
+        ],
+        at: [37.5, 7.5],
+        side: "w",
+      },
+      {
+        id: "conflict",
+        kind: "hold",
+        from: "editor",
+        path: [
+          [34.5, 1.5],
+          [33.5, 2.5],
+        ],
+        at: [33.5, 2.5],
+        side: "s",
+      },
+      {
+        id: "stale",
+        kind: "hold",
+        from: "preview",
+        path: [
+          [27.5, 5.5],
+          [28.5, 6.5],
+        ],
+        at: [28.5, 6.5],
+        side: "s",
+      },
+    ],
+    bulletAt: [38.5, 17.45],
   },
 ];
 
