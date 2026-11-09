@@ -37,7 +37,7 @@ typography:
     letterSpacing: "-0.03em"
   hero:
     fontFamily: "Schibsted Grotesk, Alexandria, system-ui, sans-serif"
-    fontSize: "clamp(38px, 10.6vw, 64px)"
+    fontSize: "clamp(42px, 11.6vw, 72px)"
     fontWeight: 700
     lineHeight: 1.05
     letterSpacing: "-0.03em"
@@ -98,13 +98,13 @@ rounded:
 spacing:
   gutter: "clamp(16px, 3.2vw, 56px)"
   section: "clamp(72px, 9vw, 150px)"
-  block: "clamp(44px, 4.6vw, 72px)"
-  case-foot: "clamp(64px, 7vw, 112px)"
+  block: "clamp(56px, 6vw, 104px)"
+  case-foot: "clamp(80px, 9vw, 150px)"
   column: "clamp(24px, 4vw, 72px)"
   overlap: "clamp(72px, 13vw, 220px)"
-  row: "12px"
+  row: "16px"
   header-height: "56px"
-  key-height: "104px"
+  key-height: "76px"
 components:
   button-primary:
     backgroundColor: "{colors.ink}"
@@ -245,7 +245,7 @@ Inside a section, the pair is exposed as the `--line` and `--on-line` custom pro
 
 - **Display** (700, clamp(44px, 7.4vw, 124px), 1.02): The terminus title.
 - **Statement** (700, clamp(36px, 5.6vw, 92px), 1.04, max 22ch): The one-sentence claim on each line's colour band.
-- **Hero** (700, clamp(38px, 10.6vw, 64px), 1.05; from 1024px, 4.2cqw at 1.04): The name and claim in the map's clearing. Sized against the stage so it stays in that clearing.
+- **Hero** (700, clamp(42px, 11.6vw, 72px), 1.05; from 1024px, 5.4cqw at 1.04): The name in the map's clearing, with the role beneath it at 0.46em, weight 500. Sized against the stage so it stays in that clearing. The sentence below runs at clamp(16px, 1.4cqw, 21px) from 1024px and stays to two or three lines.
 - **Headline** (700, clamp(36px, 5vw, 76px), 1.05): Section titles. The toolkit title takes a narrower step (clamp(30px, 3.4vw, 52px), 1.08) because it sits in a four-column cell.
 - **Title** (700, clamp(24px, 2.7vw, 42px), 1.12): Rule titles in the network rules list.
 - **Sign** (700, clamp(20px, 2.1vw, 32px), 1.25): The bilingual station sign.
@@ -255,25 +255,25 @@ Inside a section, the pair is exposed as the `--line` and `--on-line` custom pro
 - **Action** (600, 17px): Buttons and row terms.
 - **Note** (400, 15px, 1.6): Metadata and privacy notes, usually in Mute.
 - **Label** (700, 15px): Small headings inside a case study, in sentence case. Strip stops use weight 600, at 15px below 900px and 14px above.
-- **Map Label** (600, 15 sheet units): Station names, with a 5px white halo so they read across lines. It scales with the map; below a 1130px container it becomes 16.5 units and non-interchange labels hide.
+- **Map Label** (600, 15 sheet units): Station names, with a 5px white halo so they read across lines. Shown only for the lit line. It scales with the map; below a 1130px container it becomes 16.5 units.
 
 ### Named Rules
 
 **The Latin-Only Tracking Rule.** The -0.03em tracking on display type applies only under `:lang(en)`. Arabic display type is always set at 0, because letter-spacing breaks the joins between Arabic letters.
 
-**The Arabic Room Rule.** Arabic gets more leading than Latin: 1.8 for body against 1.6, 1.3 for tracked display against about 1.05, and 1.22 for the hero, whose size also drops from 4.2cqw to 3.7cqw.
+**The Arabic Room Rule.** Arabic gets more leading than Latin: 1.8 for body against 1.6, 1.3 for tracked display against about 1.05, and 1.22 for the hero, whose size also drops from 5.4cqw to 5cqw.
 
 **The Catch-All Fallback Rule.** `adjustFontFallback` stays false on both fonts. The generated metric fallback is a catch-all Arial with no script range, which sits ahead of Alexandria in the stack and swallows every Arabic glyph. With it off, Arabic falls through to Alexandria as the page intends.
 
 ## Layout
 
-The page is one fluid column capped at 1520px with a gutter of clamp(16px, 3.2vw, 56px). Below the hero, sections use a 12-column grid from 1024px. Section padding is clamp(72px, 9vw, 150px) and internal blocks step at clamp(44px, 4.6vw, 72px). Row content sits on a 12px rhythm between rules.
+The page is one fluid column capped at 1520px with a gutter of clamp(16px, 3.2vw, 56px). Below the hero, sections use a 12-column grid from 1024px. Section padding is clamp(72px, 9vw, 150px) and internal blocks step at clamp(56px, 6vw, 104px). Row content sits on a 16px rhythm between rules.
 
 **The map grid.** The network is defined on a sheet of 40 by 21.5 units at 40px per unit, giving 1600 by 860. Stops and bends live on this grid. Line segments run at 0, 45 or 90 degrees, with corners softened to a radius of 16 (12 on branches).
 
 **Fitting the first viewport.** From 1024px the stage is a size container, its width capped at the height left under the header and line key, multiplied by the sheet ratio (1.86), and never smaller than 960px. The headline, sentence and actions are positioned in the map's clearing in cqw units, so they keep their relationship to the network at any size. The seven-column line key sits directly below.
 
-**Portrait.** Below 1024px the map transposes (x and y swap) and thickens: line 11 against 8, station radius 6.5 against 5, interchange 15 against 12, terminus 12 against 9.5, bullet 25 against 16. Portrait maps carry no station labels or legend, and the line key stacks into a full list beneath the diagram.
+**Portrait.** Below 1024px the map transposes (x and y swap) and thickens: line 11 against 8, station radius 6.5 against 5, interchange 15 against 12, terminus 12 against 9.5, bullet 25 against 16. Portrait maps carry no station labels, and the line key stacks into a full list beneath the diagram.
 
 **Case studies.** Each line opens with a full-bleed band. Its lead screenshot takes eight columns and is pulled up over the band by clamp(72px, 13vw, 220px); the lead paragraph takes the other four. The pairing swaps sides on every second line. Gallery screenshots share a row and size by aspect ratio from 768px, and scroll horizontally below it.
 
@@ -314,15 +314,14 @@ The vocabulary of the map, repeated at every size. Wide values are given first, 
 
 - **Line:** stroke 8 / 11 in the line colour, round cap and join.
 - **Station:** a white dot of radius 5 / 6.5 sitting inside the line.
-- **Interchange:** a white circle of radius 12 / 15 with a 5-unit ink ring. It marks infrastructure shared by more than one line, and the shared labels are always shown.
+- **Interchange:** a white circle of radius 12 / 15 with a 5-unit ink ring. It marks infrastructure shared by more than one line.
 - **Terminus:** a white circle of radius 9.5 / 12 with a 5-unit ring in the line colour.
 - **Failure branch:** a dotted stroke 3 units lighter than the line (dash `2 11`, round cap) leaving the line and rejoining it, or stopping short, with a ring at its far point. Rings are radius 9.5 / 12 with a 3-unit line-coloured stroke, solid for retry and offline, and dashed (`3 3.4`) for a held outcome.
 - **Line bullet:** a filled circle of radius 16 / 25 carrying the Western numeral in the on-colour, placed at the end of the line.
-- **Legend:** ink samples of the shared ring, the failure dots and the held ring, set in the map's lower corner.
 
 ### Line Isolation
 
-The signature behaviour. Activating a line (hover, focus, tap, or the auto-cycle) drops every other line and station to 0.2 opacity, hides unrelated labels, and runs a train along the line once. The train is an ink capsule of 36 by 16 / 48 by 20 with a 3-unit white stroke, rotated along the path over at least 2600ms. The auto-cycle lights one line for 4400ms, rests on the full network for 2600ms, pauses when off-screen or when the tab is hidden, and stops for good the first time the visitor takes over. Pointer hit areas are 30 / 44 units wide.
+The signature behaviour. At rest the map is only lines, stations and bullets. Activating a line (hover, focus, tap, or the auto-cycle) drops every other line and station to 0.2 opacity, reveals that line's station names and failure branches, and runs a train along the line once. The train is an ink capsule of 36 by 16 / 48 by 20 with a 3-unit white stroke, rotated along the path over at least 2600ms. The auto-cycle lights one line for 4400ms, rests on the full network for 2600ms, pauses when off-screen or when the tab is hidden, and stops for good the first time the visitor takes over. Pointer hit areas are 30 / 44 units wide.
 
 ### Motion
 
@@ -359,15 +358,15 @@ Underlined fields exist only on the ink ground. Transparent, white text, a 2px b
 
 ### Navigation
 
-A sticky 56px header on white with a 2px ink rule. The name is set at 17px bold on the reading-start side, the seven line bullets sit in the middle from 1024px, and Email, CV and the language switch sit at the end at 15px, weight 600, underlining on hover. The language switch is written in the other language's own script. The bullet for the case study in view gets the double ring.
+A sticky 56px header on white with a 2px ink rule. The name is set at 17px bold on the reading-start side, the seven line bullets sit in the middle from 1024px once the hero has scrolled away, and Email, CV and the language switch sit at the end at 15px, weight 600, underlining on hover. The language switch is written in the other language's own script. The bullet for the case study in view gets the double ring.
 
 ### Line Key
 
-The seven-part index beneath the map, between two 2px ink rules: seven columns from 1024px, a stacked list below. Each entry is a bullet, the line name at 15px weight 600 and a descriptor at 13px. Hovering, focusing or the auto-cycle fills the entry with its line colour and inverts the bullet.
+The seven-part index beneath the map, between two 2px ink rules: seven columns from 1024px, a stacked list below. Each entry is a bullet and one short plain name at 15px weight 600. Hovering, focusing or the auto-cycle fills the entry with its line colour and inverts the bullet.
 
 ### Ruled Rows
 
-The system's replacement for cards and tables: a 2px ink rule on top, 1px Rule dividers between rows, 12px row padding, a semibold term and a detail in a 1:2 or 1:3 grid.
+The system's replacement for cards and tables: a 2px ink rule on top, 1px Rule dividers between rows, 16px row padding, a semibold term and a detail in a 1:2 or 1:3 grid.
 
 ### Screenshot Frame
 

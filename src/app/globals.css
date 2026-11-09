@@ -33,7 +33,7 @@
     --radius: 0.25rem;
 
     --header-h: 56px;
-    --key-h: 104px;
+    --key-h: 76px;
     --gutter: clamp(16px, 3.2vw, 56px);
   }
 
@@ -138,9 +138,18 @@
   }
 
   .hero-headline {
-    font-size: clamp(38px, 10.6vw, 64px);
+    font-size: clamp(42px, 11.6vw, 72px);
     line-height: 1.05;
     font-weight: 700;
+  }
+
+  .hero-role {
+    display: block;
+    margin-top: 0.3em;
+    font-size: 0.46em;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0;
   }
 
   .hero-side {
@@ -150,7 +159,7 @@
     width: 54%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     font-size: 15px;
     line-height: 1.5;
   }
@@ -163,25 +172,25 @@
     .hero-headline {
       position: absolute;
       inset-inline-start: 2.6cqw;
-      top: 2.6cqw;
-      width: 39cqw;
-      font-size: 4.2cqw;
+      top: 3.2cqw;
+      width: 36cqw;
+      font-size: 5.4cqw;
       line-height: 1.04;
     }
     .hero-headline:lang(ar) {
-      font-size: 3.7cqw;
+      font-size: 5cqw;
       line-height: 1.22;
     }
     .hero-side {
       inset-inline-start: 2.6cqw;
-      top: 16.8cqw;
-      width: 38cqw;
-      gap: 1.3cqw;
-      font-size: clamp(14.5px, 1.22cqw, 19px);
-      line-height: 1.45;
+      top: 15.4cqw;
+      width: 31cqw;
+      gap: 2cqw;
+      font-size: clamp(16px, 1.4cqw, 21px);
+      line-height: 1.5;
     }
     .hero-side p:lang(ar) {
-      line-height: 1.6;
+      line-height: 1.7;
     }
   }
 
@@ -206,8 +215,16 @@
     opacity: 0.2;
   }
 
-  .net[data-active] .lbl:not([data-on]) {
+  /* At rest the map is only lines. Names and failure paths come with a lit line. */
+  .net .lbl,
+  .net .fail {
     opacity: 0;
+    transition: opacity 220ms ease-out;
+  }
+
+  .net .lbl[data-on],
+  .net [data-on] > .fail {
+    opacity: 1;
   }
 
   .net .hit {
@@ -233,12 +250,6 @@
     .net text {
       font-size: 16.5px;
     }
-    .net .lbl.minor {
-      opacity: 0;
-    }
-    .net[data-active] .lbl[data-on] {
-      opacity: 1;
-    }
   }
 
   /* Line key */
@@ -247,7 +258,7 @@
     align-items: center;
     gap: 12px;
     height: 100%;
-    padding: 12px var(--gutter);
+    padding: 18px var(--gutter);
     color: var(--ink);
     transition:
       background-color 160ms ease-out,
@@ -269,22 +280,9 @@
     color: var(--line);
   }
 
-  .key-link small {
-    display: block;
-    font-size: 13px;
-    line-height: 1.3;
-    opacity: 0.82;
-  }
-
-  .key-link:hover small,
-  .key-link:focus-visible small,
-  .key-link[data-on] small {
-    opacity: 1;
-  }
-
   @media (min-width: 1024px) {
     .key-link {
-      padding: 12px clamp(10px, 1vw, 18px);
+      padding: 18px clamp(10px, 1.2vw, 22px);
       gap: 10px;
     }
   }

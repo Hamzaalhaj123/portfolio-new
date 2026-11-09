@@ -11,6 +11,19 @@ export function SiteHeader() {
   const locale = useLocale() as "en" | "ar";
   const other = locale === "en" ? "ar" : "en";
   const [current, setCurrent] = useState<number | null>(null);
+  const [pastHero, setPastHero] = useState(false);
+
+  // The hero already lists the projects, so the header waits until it's gone.
+  useEffect(() => {
+    const hero = document.getElementById("headline")?.closest("section");
+    if (!hero) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setPastHero(!entry.isIntersecting),
+      { rootMargin: "-56px 0px 0px 0px" }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const sections = LINES.map((l) =>
@@ -44,7 +57,10 @@ export function SiteHeader() {
           {t("name")}
         </a>
 
-        <nav aria-label={t("linesNav")} className="hidden lg:block">
+        <nav
+          aria-label={t("linesNav")}
+          className={`hidden transition-opacity duration-200 lg:block ${pastHero ? "" : "invisible opacity-0"}`}
+        >
           <ul className="flex items-center gap-1.5">
             {LINES.map((line) => {
               const isCurrent = current === line.number;

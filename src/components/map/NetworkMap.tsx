@@ -158,7 +158,6 @@ export function NetworkMap({
     at: Pt,
     side: Side,
     owners: LineId[],
-    minor: boolean,
     nudge?: readonly [number, number]
   ) => {
     if (tall) return null;
@@ -171,7 +170,7 @@ export function NetworkMap({
         y={y + dy}
         textAnchor={anchor}
         fontSize={15}
-        className={minor ? "lbl minor" : "lbl"}
+        className="lbl"
         {...on(owners)}
       >
         {t(SHORT_LABELS[id] ?? id)}
@@ -214,6 +213,7 @@ export function NetworkMap({
               strokeWidth={stroke - 3}
               strokeDasharray="2 11"
               strokeLinecap="round"
+              className="fail"
             />
           ))}
         </g>
@@ -251,6 +251,7 @@ export function NetworkMap({
                 stroke={line.color}
                 strokeWidth={3}
                 strokeDasharray={branch.kind === "hold" ? "3 3.4" : undefined}
+                className="fail"
               />
             );
           })}
@@ -294,13 +295,13 @@ export function NetworkMap({
       {LINES.flatMap((line) => [
         ...line.stops
           .filter((s) => !INTERCHANGES.includes(s.id))
-          .map((s) => renderLabel(s.id, s.at, s.side, [line.id], true)),
+          .map((s) => renderLabel(s.id, s.at, s.side, [line.id])),
         ...(line.branches ?? []).map((b) =>
-          renderLabel(b.id, b.at, b.side, [line.id], true)
+          renderLabel(b.id, b.at, b.side, [line.id])
         ),
       ])}
       {interchanges.map(({ id, stop, owners }) =>
-        renderLabel(id, stop.at, stop.side, owners, false, stop.nudge)
+        renderLabel(id, stop.at, stop.side, owners, stop.nudge)
       )}
 
       {LINES.map((line) => (
@@ -317,47 +318,6 @@ export function NetworkMap({
           }}
         />
       ))}
-
-      {!tall &&
-        (["legendShared", "legendFailure", "legendHeld"] as const).map(
-          (key, index) => {
-            const [x, y] = place([2.5, 17.25 + index * 0.72]);
-            return (
-              <g key={key}>
-                {key === "legendFailure" ? (
-                  <line
-                    x1={x - 11}
-                    x2={x + 11}
-                    y1={y}
-                    y2={y}
-                    stroke="var(--ink)"
-                    strokeWidth={5}
-                    strokeDasharray="2 8"
-                    strokeLinecap="round"
-                  />
-                ) : (
-                  <circle
-                    cx={x}
-                    cy={y}
-                    r={8}
-                    fill="#fff"
-                    stroke="var(--ink)"
-                    strokeWidth={key === "legendShared" ? 4 : 2.5}
-                    strokeDasharray={key === "legendHeld" ? "3 3.2" : undefined}
-                  />
-                )}
-                <text
-                  x={rtl ? x - 22 : x + 22}
-                  y={y + 5}
-                  textAnchor="start"
-                  fontSize={15}
-                >
-                  {t(key)}
-                </text>
-              </g>
-            );
-          }
-        )}
 
       <g ref={train} opacity={0} pointerEvents="none">
         <rect

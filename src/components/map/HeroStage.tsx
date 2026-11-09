@@ -79,6 +79,7 @@ export function HeroStage() {
           className="hero-headline tight px-[var(--gutter)] pb-6 pt-8 lg:p-0"
         >
           {t("headline")}
+          <span className="hero-role">{t("role")}</span>
         </h1>
 
         <div className="relative lg:static">
@@ -135,8 +136,7 @@ export function HeroStage() {
               >
                 <span className="bullet text-[15px]">{line.number}</span>
                 <span className="min-w-0 text-[15px] font-semibold leading-tight">
-                  {line.names[locale]}
-                  <small className="font-normal">{tKey(line.id)}</small>
+                  {tKey(line.id)}
                 </span>
               </a>
             </li>

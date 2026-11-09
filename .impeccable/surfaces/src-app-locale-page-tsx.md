@@ -20,7 +20,7 @@ OWN-WORLD: white enamel sheet, near-black ink, seven full-saturation line colour
 
 STORY: the visitor sees who he is and what he builds, follows a line into a case study, sees how it handles failure, reads the career line, and ends where all lines terminate: his email.
 
-FIRST VIEWPORT: the map fills the sheet edge to edge. A title block sits in a clearing of the network at the reading-start top corner: the headline carrying name and claim at about 4.3cqw, one sentence, Email and CV actions. Seven-column line key along the foot. Sticky header with name, line bullets, CV, language.
+FIRST VIEWPORT: the map fills the sheet edge to edge. A title block sits in a clearing of the network at the reading-start top corner: the name at about 5.4cqw with the role under it, one short sentence, Email and CV actions. At rest the map shows lines only; names and failure branches come with a lit line. Seven-column line key along the foot, one short name each. Sticky header with name, CV, language; line bullets join it once the hero is gone.
 
 FORM: The Metro Map of Systems, position 1 on the ordered list, chosen by the user as the pick card. seed:6810a1c5df62e296. Signature interaction: hovering, focusing or auto-cycling isolates one line, greys the rest and runs a train along it; the map redraws mirrored in Arabic so trains run in reading direction.
 

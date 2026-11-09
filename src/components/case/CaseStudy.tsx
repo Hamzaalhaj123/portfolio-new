@@ -79,7 +79,7 @@ export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
         </div>
       </header>
 
-      <div className="wrap pb-[clamp(64px,7vw,112px)]">
+      <div className="wrap pb-[clamp(80px,9vw,150px)]">
         <div className="-mt-[var(--overlap)] grid gap-x-[clamp(24px,4vw,72px)] gap-y-8 lg:grid-cols-12">
           <div className={cn("lg:col-span-8", flip && "lg:order-2")}>
             <a
@@ -120,7 +120,7 @@ export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
           </div>
         </div>
 
-        <div className="mt-[clamp(44px,4.6vw,72px)]">
+        <div className="mt-[clamp(56px,6vw,104px)]">
           <h3 className="text-[15px] font-bold">{tCase("stops")}</h3>
           <ol
             className="strip mt-5"
@@ -167,34 +167,33 @@ export function CaseStudy({ line, flip }: { line: Line; flip: boolean }) {
           )}
         </div>
 
-        <div className="mt-[clamp(44px,4.6vw,72px)] grid gap-x-[clamp(24px,4vw,72px)] gap-y-10 lg:grid-cols-12">
-          <p className="max-w-[62ch] lg:col-span-5">{t("story")}</p>
-          <div className="lg:col-span-7">
-            <h3 className="text-[15px] font-bold">{tCase("built")}</h3>
-            <dl className="mt-3 border-t-2 border-ink">
-              {highlights.map((highlight) => (
-                <div
-                  key={highlight.label}
-                  className="grid gap-x-6 gap-y-0.5 border-b border-rule py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
-                >
-                  <dt className="font-semibold">{highlight.label}</dt>
-                  <dd>{highlight.detail}</dd>
-                </div>
-              ))}
-              <div className="grid gap-x-6 gap-y-0.5 py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-                <dt className="font-semibold">{tCase("stack")}</dt>
-                <dd dir="ltr" className="rtl:text-right">
-                  {assets.stack.join(", ")}
-                </dd>
+        <div className="mt-[clamp(56px,6vw,104px)] grid gap-x-[clamp(24px,4vw,72px)] gap-y-3 lg:grid-cols-12">
+          <h3 className="text-[15px] font-bold lg:col-span-4">
+            {tCase("built")}
+          </h3>
+          <dl className="border-t-2 border-ink lg:col-span-8">
+            {highlights.map((highlight) => (
+              <div
+                key={highlight.label}
+                className="grid gap-x-6 gap-y-0.5 border-b border-rule py-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
+              >
+                <dt className="font-semibold">{highlight.label}</dt>
+                <dd>{highlight.detail}</dd>
               </div>
-            </dl>
-          </div>
+            ))}
+            <div className="grid gap-x-6 gap-y-0.5 py-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+              <dt className="font-semibold">{tCase("stack")}</dt>
+              <dd dir="ltr" className="rtl:text-right">
+                {assets.stack.join(", ")}
+              </dd>
+            </div>
+          </dl>
         </div>
 
         {gallery.length > 0 && (
           <ul
             aria-label={tCase("moreScreens", { name })}
-            className="gallery mt-[clamp(44px,4.6vw,72px)]"
+            className="gallery mt-[clamp(56px,6vw,104px)]"
           >
             {gallery.map((shot, index) => {
               const alt = alts[index + 1];

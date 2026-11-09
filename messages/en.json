@@ -2,70 +2,71 @@
   "Site": {
     "name": "Hamza Alhaj",
     "title": "Hamza Alhaj, full-stack software developer",
-    "description": "Full-stack developer building commerce platforms and Saudi compliance integrations, in Arabic and English.",
+    "description": "Full-stack developer. Online stores, business software, and systems for Saudi e-invoicing and medicine tracking.",
     "skip": "Skip to the work",
     "cv": "CV",
     "email": "Email",
-    "linesNav": "Projects by line",
-    "lineLabel": "Line {number}: {name}",
+    "linesNav": "Projects",
+    "lineLabel": "Project {number}: {name}",
     "switchLabel": "Read this page in Arabic",
     "switchTo": "العربية"
   },
   "Hero": {
-    "headline": "Hamza Alhaj builds software that doesn't lose things.",
-    "body": "Invoices, medicine packs, birthday flowers. I'm a full-stack developer, and each line on this map is a system I worked on. Every stop is a real step in it, including the places it can go wrong.",
+    "headline": "Hamza Alhaj",
+    "role": "Full-stack developer",
+    "body": "I build online stores, business software, and systems for Saudi e-invoicing and medicine tracking.",
     "email": "Email me",
     "cv": "Download CV",
-    "mapLabel": "A transit map of seven software projects. Each line is a project and each stop a step in its workflow. The projects are listed after the map.",
-    "keyLabel": "The seven lines"
+    "mapLabel": "A map of seven software projects. Each line is a project. The projects are listed after the map.",
+    "keyLabel": "Projects"
   },
   "Key": {
-    "zatca": "Saudi e-invoicing",
-    "sfda": "Medicine track-and-trace",
-    "raneem": "Gift commerce and delivery",
-    "strata": "Game statistics",
-    "aleef": "Pet care booking",
-    "occasion": "Premium gifting store",
-    "rtm": "Accounting modules"
+    "zatca": "E-invoicing",
+    "sfda": "Medicine tracking",
+    "raneem": "Raneem Gifts",
+    "strata": "Strata",
+    "aleef": "Aleef Care",
+    "occasion": "Occasion",
+    "rtm": "RTM Accounting"
   },
   "Stations": {
     "prism": "Retail Pro Prism",
-    "ingest": "Ingest",
-    "queue": "Queue workers",
+    "ingest": "Receive",
+    "queue": "Background jobs",
     "postgres": "PostgreSQL",
-    "normalize": "Normalize",
+    "normalize": "Clean up",
     "xml": "XML",
     "sign": "Sign",
-    "submit": "Submit to ZATCA",
-    "reconcile": "Reconcile",
+    "submit": "Send to ZATCA",
+    "reconcile": "Match records",
     "offline": "Offline",
     "retry": "Retry",
-    "pickup": "Finalized document",
-    "scan": "DataMatrix scan",
-    "match": "Stock match",
-    "dispatch": "Durable dispatch",
+    "pickup": "Finished document",
+    "scan": "Scan pack",
+    "match": "Check stock",
+    "dispatch": "Send",
     "report": "Report to SFDA",
-    "unknown": "Held as unknown",
+    "unknown": "Unclear result",
     "gift": "Choose gift",
-    "shift": "Delivery shift",
+    "shift": "Delivery time",
     "nop": "nopCommerce",
-    "prep": "Preparation",
+    "prep": "Prepare",
     "qc": "Quality check",
-    "send": "Dispatch",
+    "send": "Out for delivery",
     "otp": "One-time code",
-    "handover": "Photo handover",
+    "handover": "Delivery photo",
     "results": "Match results",
-    "schedule": "Scheduled ingest",
+    "schedule": "Import",
     "ratings": "Ratings",
-    "league": "League standings",
-    "factions": "Faction win rates",
+    "league": "Standings",
+    "factions": "Win rates",
     "service": "Service",
     "branch": "Branch",
     "time": "Time",
     "session": "Session",
     "browse": "Browse",
     "card": "Gift card",
-    "cart": "Guest cart",
+    "cart": "Cart",
     "shipping": "Shipping",
     "payment": "Payment",
     "order": "Order placed",
@@ -75,13 +76,10 @@
     "invoice": "Invoice",
     "bank": "Bank match",
     "reports": "Reports",
-    "pickupShort": "Document",
-    "legendShared": "Shared infrastructure",
-    "legendFailure": "Failure path",
-    "legendHeld": "Held, not retried"
+    "pickupShort": "Document"
   },
   "Case": {
-    "stops": "Stops on this line",
+    "stops": "How it works",
     "whenItGoesWrong": "When it goes wrong",
     "built": "What I worked on",
     "stack": "Built with",
@@ -91,19 +89,18 @@
   },
   "Cases": {
     "zatca": {
-      "statement": "A lost invoice is a compliance problem, not just a bug.",
-      "lead": "Every sale a Saudi retailer finalizes has to become a signed, compliant e-invoice, and simplified invoices must reach ZATCA within 24 hours.",
-      "story": "This integration turns finalized Retail Pro documents into durable workflows. Each step is separate, so a failure can be retried or reconciled instead of lost, and stores can keep signing invoices while offline.",
+      "statement": "E-invoices for stores in Saudi Arabia.",
+      "lead": "Stores in Saudi Arabia must send signed e-invoices to ZATCA. This system creates and sends them from Retail Pro. If a step fails, it can be retried. If a store goes offline, it can still sign invoices.",
       "highlights": [
-        { "label": "Invoice workflows", "detail": "Ingestion, normalization, XML generation, signing, submission" },
-        { "label": "Background processing", "detail": "Queue workers, with the database as the source of truth" },
-        { "label": "Offline handling", "detail": "Edge agent with local signing, QR codes and a durable outbox" },
-        { "label": "Reconciliation", "detail": "Ordered reporting with a recorded history of every attempt" }
+        { "label": "Invoices", "detail": "Receive, clean up, create XML, sign, send" },
+        { "label": "Background jobs", "detail": "Queue workers backed by the database" },
+        { "label": "Offline mode", "detail": "Local signing, QR codes and a saved outbox" },
+        { "label": "History", "detail": "A saved record of every attempt" }
       ],
       "note": "Private project, shown with sample data",
       "branches": {
-        "offline": "The store signs locally, adds the QR code and holds the invoice in a durable outbox.",
-        "retry": "A failed submission is retried or reconciled, and every attempt is recorded."
+        "offline": "The store signs the invoice and saves it to send later.",
+        "retry": "A failed send is tried again. Every attempt is saved."
       },
       "shots": [
         "ZATCA invoice status report",
@@ -112,18 +109,17 @@
       ]
     },
     "sfda": {
-      "statement": "When the answer is unclear, don't report twice.",
-      "lead": "Saudi Arabia's SFDA tracks medicine packs individually, from warehouse to pharmacy to patient. Staff can't stop serving customers to report each movement, so this integration works from inside the Retail Pro Prism point of sale.",
-      "story": "Receiving, transfers and pharmacy sales are picked up from finalized documents, and a scanner reads each pack's DataMatrix code. When SFDA's response is unclear, the outcome is held as unknown instead of being retried blindly, so a pack isn't reported twice.",
+      "statement": "Tracking medicine packs in Saudi Arabia.",
+      "lead": "The SFDA tracks every medicine pack from warehouse to patient. This system reports each movement from inside the Retail Pro Prism point of sale, so staff can keep serving customers. If the SFDA's answer is unclear, it stops instead of reporting a pack twice.",
       "highlights": [
-        { "label": "Service development", "detail": ".NET Windows service with local SQLite persistence" },
-        { "label": "POS integration", "detail": "Prism WebClient plugin for transactions and stock matching" },
-        { "label": "Scanning", "detail": "GS1 DataMatrix item scanner for tracked medicines" },
-        { "label": "Reliable delivery", "detail": "Durable dispatch, safe retries and explicit unknown outcomes" }
+        { "label": "Windows service", "detail": ".NET service with local SQLite storage" },
+        { "label": "Point of sale", "detail": "Prism plugin for transactions and stock matching" },
+        { "label": "Scanner", "detail": "Reads the GS1 DataMatrix code on each pack" },
+        { "label": "Safe sending", "detail": "Safe retries, and a clear result when the answer is unknown" }
       ],
       "note": "Private project, shown with sample data",
       "branches": {
-        "unknown": "An unclear SFDA response stops here as an explicit unknown. It isn't retried blindly."
+        "unknown": "The result is marked as unknown, so the pack isn't reported twice."
       },
       "shots": [
         "SFDA RSD transactions inside the Prism plugin",
@@ -131,14 +127,13 @@
       ]
     },
     "raneem": {
-      "statement": "Flowers for a birthday only count if they arrive on the right day.",
-      "lead": "Raneem Gifts carries that promise from choosing a gift and delivery shift through preparation, quality checks and dispatch, to a handover confirmed with a photo and a one-time code.",
-      "story": "One platform is designed around customers, personal shoppers, drivers and twelve permission-scoped staff roles, in both Arabic and English, so everyone works from the same order.",
+      "statement": "Gift orders, from checkout to the door.",
+      "lead": "Customers pick a gift and a delivery time. Staff prepare and check it. A driver delivers it and confirms with a photo and a one-time code. One platform for customers, shoppers, drivers and staff, in Arabic and English.",
       "highlights": [
-        { "label": "Storefront", "detail": "Gifts, bouquet builder, gift cards and subscriptions" },
-        { "label": "Backend", "detail": ".NET commerce services behind the web and mobile clients" },
-        { "label": "Operations", "detail": "Console for orders, preparation, dispatch and stock" },
-        { "label": "Mobile prototypes", "detail": "Expo apps for delivery drivers and personal shoppers" }
+        { "label": "Store", "detail": "Gifts, bouquet builder, gift cards and subscriptions" },
+        { "label": "Backend", "detail": ".NET services for web and mobile" },
+        { "label": "Operations", "detail": "Orders, preparation, delivery and stock" },
+        { "label": "Mobile prototypes", "detail": "Expo apps for drivers and personal shoppers" }
       ],
       "note": "Private project, shown with demo data",
       "shots": [
@@ -150,13 +145,12 @@
       ]
     },
     "strata": {
-      "statement": "2.1 million matches from 48,000 players, turned into a league.",
-      "lead": "Strata is the competitive home of the GameReplays.org community for Command & Conquer: Generals, with ladders, player profiles, match history and balance analytics in one place.",
-      "story": "A constant stream of game results becomes ratings, league standings and faction win rates. In October 2026, 954 people were on the site at the same time.",
+      "statement": "2.1 million matches. 48,000 players.",
+      "lead": "Strata is the league site for the GameReplays.org Command & Conquer: Generals community. It has ladders, player profiles, match history and stats. In October 2026, 954 people were on the site at the same time.",
       "highlights": [
-        { "label": "Competition", "detail": "Overall and seasonal ladders with ratings and league results" },
-        { "label": "Data pipeline", "detail": "Scheduled ingestion and queue workers for match history" },
-        { "label": "Analytics", "detail": "Faction matchups, map win rates and performance graphs" }
+        { "label": "Competition", "detail": "Overall and seasonal ladders" },
+        { "label": "Data", "detail": "Scheduled imports and queue workers for match history" },
+        { "label": "Stats", "detail": "Matchups, map win rates and performance graphs" }
       ],
       "note": "Live site, built with the GameReplays team",
       "shots": [
@@ -167,13 +161,12 @@
       ]
     },
     "aleef": {
-      "statement": "Everything a pet needs, booked in one place.",
-      "lead": "Owners book grooming and clinic visits at their nearest branch, join behavior courses, shop services and find pets to adopt, all in Arabic and on any device.",
-      "story": "Behind that simple flow is a custom reservation system that handles availability across branches and service types. The platform reports more than 10,000 completed sessions and 5,000 happy pets, supported by over 50 expert trainers.",
+      "statement": "Book pet care online.",
+      "lead": "Owners book grooming and clinic visits, join courses, shop and find pets to adopt, in Arabic and on any device. The platform reports more than 10,000 completed sessions and over 50 trainers.",
       "highlights": [
-        { "label": "Booking", "detail": "Service, branch and time selection across every location" },
-        { "label": "Services", "detail": "Grooming, clinics, training courses, adoption and a market" },
-        { "label": "Language", "detail": "Right-to-left Arabic experience on desktop and mobile" }
+        { "label": "Booking", "detail": "Pick a service, a branch and a time" },
+        { "label": "Services", "detail": "Grooming, clinics, courses, adoption and a market" },
+        { "label": "Language", "detail": "Right-to-left Arabic on desktop and mobile" }
       ],
       "note": "Live site",
       "shots": [
@@ -183,14 +176,13 @@
       ]
     },
     "occasion": {
-      "statement": "A storefront as considered as the gifts it sells.",
-      "lead": "Occasion is a premium gifting store for chocolates, flowers and perfumes.",
-      "story": "Built headless on nopCommerce, it renders catalog pages on the server for speed and search visibility, and covers the complete journey from browsing to a placed order, including personalized gift cards, in Arabic and English.",
+      "statement": "An online gift store.",
+      "lead": "Occasion sells premium chocolates, flowers and perfumes. It covers everything from browsing to placing an order, including personal gift cards, in Arabic and English.",
       "highlights": [
-        { "label": "Authentication", "detail": "Phone OTP sign-in with tokens kept in httpOnly cookies" },
-        { "label": "Checkout", "detail": "Guest cart, shipping, payment and order placement" },
-        { "label": "Localization", "detail": "Arabic RTL and English LTR from one component system" },
-        { "label": "API contracts", "detail": "Typed clients generated from the OpenAPI specification" }
+        { "label": "Sign-in", "detail": "Phone code sign-in with tokens in httpOnly cookies" },
+        { "label": "Checkout", "detail": "Guest cart, shipping, payment and order" },
+        { "label": "Languages", "detail": "Arabic and English from the same components" },
+        { "label": "API", "detail": "Typed clients generated from OpenAPI" }
       ],
       "note": "Private project",
       "shots": [
@@ -201,13 +193,12 @@
       ]
     },
     "rtm": {
-      "statement": "Accounting workflows, on the open-source edition.",
-      "lead": "RTM Accounting brings financial reports, bank matching, fixed assets, deferrals, budgets and receivables follow-up to Odoo 19 Community as independent modules.",
-      "story": "A connected workspace ties the work together, so a team can follow a purchase through stock, sale, invoice and bank match, with live figures on one overview.",
+      "statement": "Accounting add-ons for Odoo.",
+      "lead": "RTM Accounting adds financial reports, bank matching, fixed assets and budgets to Odoo 19 Community. A team can follow a purchase through stock, sale, invoice and bank match.",
       "highlights": [
-        { "label": "Business modules", "detail": "Accounting addon and a connected app workspace" },
-        { "label": "Reporting", "detail": "Financial statements and ledgers, exported to XLSX and PDF" },
-        { "label": "Accounting workflows", "detail": "Bank matching, assets, deferrals, budgets and follow-up" }
+        { "label": "Modules", "detail": "An accounting add-on and a connected workspace" },
+        { "label": "Reports", "detail": "Statements and ledgers, exported to XLSX and PDF" },
+        { "label": "Accounting", "detail": "Bank matching, assets, deferrals, budgets and follow-up" }
       ],
       "note": "Private project, shown with a sample company",
       "shots": [
@@ -218,36 +209,36 @@
     }
   },
   "Rules": {
-    "title": "How the network runs",
+    "title": "How I build",
     "items": [
-      { "line": 1, "title": "Every step is its own stop.", "body": "Separate steps mean a failure can be retried or reconciled at the point it happened, and nothing upstream is lost." },
-      { "line": 2, "title": "Unknown is a valid answer.", "body": "If a system can't tell whether something worked, it should say so, not guess and report the same pack twice." },
-      { "line": 3, "title": "The journey ends with proof.", "body": "An order isn't done when it leaves the shop. It's done when a photo and a one-time code confirm the handover." },
-      { "line": 6, "title": "Arabic isn't a translation.", "body": "Right-to-left Arabic and left-to-right English come from one component system, in products people use today." }
+      { "line": 1, "title": "One step at a time.", "body": "If a step fails, only that step runs again. Nothing before it is lost." },
+      { "line": 2, "title": "If unsure, stop.", "body": "If a system doesn't know whether something worked, it should say so, not guess." },
+      { "line": 3, "title": "Done means delivered.", "body": "An order isn't done when it leaves the shop. It's done when a photo and a code confirm delivery." },
+      { "line": 6, "title": "Arabic and English, equally.", "body": "Both languages come from the same components, in products people use today." }
     ]
   },
   "Route": {
-    "title": "The route so far",
+    "title": "Experience",
     "stops": [
-      { "when": "2022", "name": "Data Power", "place": "Saudi Arabia, remote", "body": "Worked with a startup delivering technology solutions to other companies, including a modern, responsive landing page.", "site": "http://data-power-website-dev.vercel.app/", "image": "datapower", "alt": "DataPower landing page" },
-      { "when": "2023", "name": "Bohr model in 3D", "place": "University research", "body": "Built a Three.js visualization of the Bohr model and wrote a research paper on how we made it.", "site": "https://bohr-model-visualization.vercel.app/", "image": "bohr", "alt": "3D Bohr model visualization" },
-      { "when": "2023", "name": "Mobadroon", "place": "Community", "body": "A two-year community journey: taking part in activities, organizing meetings and sessions, and managing the team's social media account." },
-      { "when": "2025 to now", "name": "RTM Solutions", "place": "Saudi Arabia, software developer", "body": "Commerce platforms, compliance integrations and business software for clients, plus the company landing page, which helped bring in new clients.", "site": "https://rtm-solutions.com", "image": "rtm", "alt": "RTM Solutions landing page" }
+      { "when": "2022", "name": "Data Power", "place": "Saudi Arabia, remote", "body": "Worked at a startup that builds software for other companies, including a responsive landing page.", "site": "http://data-power-website-dev.vercel.app/", "image": "datapower", "alt": "DataPower landing page" },
+      { "when": "2023", "name": "Bohr model in 3D", "place": "University research", "body": "Built a 3D Bohr model with Three.js and wrote a research paper about it.", "site": "https://bohr-model-visualization.vercel.app/", "image": "bohr", "alt": "3D Bohr model visualization" },
+      { "when": "2023", "name": "Mobadroon", "place": "Community", "body": "Two years of community work: organized meetings and sessions, and ran the team's social media." },
+      { "when": "2025 to now", "name": "RTM Solutions", "place": "Saudi Arabia, software developer", "body": "Commerce platforms, compliance integrations and business software for clients, plus the company website.", "site": "https://rtm-solutions.com", "image": "rtm", "alt": "RTM Solutions landing page" }
     ],
-    "alsoTitle": "Also along the way",
+    "alsoTitle": "Other projects",
     "also": [
-      { "name": "Hindam", "body": "My own marketplace SaaS with a storefront, admin and vendor management. Third place in a local startup competition." },
-      { "name": "Electricity workflow dashboard", "body": "Contract work in Damascus: helped build a dashboard to organize the workflow of electricity providers." },
+      { "name": "Hindam", "body": "My own marketplace SaaS. Third place in a local startup competition." },
+      { "name": "Electricity workflow dashboard", "body": "Contract work in Damascus. Helped build a dashboard for electricity providers." },
       { "name": "Mueen", "body": "A school management system, built with a backend developer.", "site": "https://mueen-frontend-v3.vercel.app" }
     ],
     "open": "Open site"
   },
   "Toolkit": {
-    "title": "What I work with",
+    "title": "Skills",
     "groups": [
-      { "name": "Frontend", "items": "TypeScript, React, Next.js, Vite, Tailwind CSS, Sass, responsive and RTL design" },
-      { "name": "Backend", "items": "Node.js, Express, NestJS, Fastify, .NET, REST APIs, WebSocket, background job queues" },
-      { "name": "Databases", "items": "PostgreSQL, MySQL, MongoDB, Redis, database design and optimization" },
+      { "name": "Frontend", "items": "TypeScript, React, Next.js, Vite, Tailwind CSS, Sass" },
+      { "name": "Backend", "items": "Node.js, Express, NestJS, Fastify, .NET, REST APIs, WebSocket, job queues" },
+      { "name": "Databases", "items": "PostgreSQL, MySQL, MongoDB, Redis" },
       { "name": "Mobile", "items": "React Native and Expo" },
       { "name": "Platforms", "items": "nopCommerce, MedusaJS, MercurJS, Odoo" },
       { "name": "Delivery", "items": "Docker, Coolify, Git, GitHub" },
@@ -255,13 +246,13 @@
     ]
   },
   "Contact": {
-    "title": "Every line ends here.",
-    "body": "I'm open to full-stack roles. If you're hiring someone who thinks about the failure path first, write to me.",
+    "title": "Get in touch.",
+    "body": "I'm open to full-stack roles.",
     "cv": "Download CV",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "whatsapp": "WhatsApp",
-    "formTitle": "Or send a message here",
+    "formTitle": "Or send a message",
     "name": "Your name",
     "emailField": "Your email",
     "message": "Message",

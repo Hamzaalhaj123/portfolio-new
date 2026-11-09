@@ -91,7 +91,7 @@ export function CareerRoute() {
           {t("title")}
         </h2>
 
-        <ol className="relative mt-[clamp(32px,4vw,64px)] grid gap-10 before:absolute before:bottom-2 before:start-[8px] before:top-2 before:w-[6px] before:bg-ink lg:grid-cols-4 lg:gap-8 lg:before:bottom-auto lg:before:end-0 lg:before:start-0 lg:before:top-[8px] lg:before:h-[6px] lg:before:w-auto">
+        <ol className="relative mt-[clamp(32px,4vw,64px)] grid gap-12 before:absolute before:bottom-2 before:start-[8px] before:top-2 before:w-[6px] before:bg-ink lg:grid-cols-4 lg:gap-12 lg:before:bottom-auto lg:before:end-0 lg:before:start-0 lg:before:top-[8px] lg:before:h-[6px] lg:before:w-auto">
           {stops.map((stop) => {
             const image = stop.image ? ROUTE_IMAGES[stop.image] : null;
             return (
@@ -140,7 +140,7 @@ export function CareerRoute() {
             {also.map((item) => (
               <li
                 key={item.name}
-                className="grid gap-x-6 gap-y-0.5 border-b border-rule py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
+                className="grid gap-x-6 gap-y-0.5 border-b border-rule py-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
               >
                 <p className="font-semibold">{item.name}</p>
                 <p>
@@ -182,7 +182,7 @@ export function Toolkit() {
           {groups.map((group) => (
             <div
               key={group.name}
-              className="grid gap-x-6 gap-y-0.5 border-b border-rule py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)]"
+              className="grid gap-x-6 gap-y-0.5 border-b border-rule py-4 sm:grid-cols-[minmax(0,1fr)_minmax(0,3fr)]"
             >
               <dt className="font-semibold">{group.name}</dt>
               <dd>{group.items}</dd>
