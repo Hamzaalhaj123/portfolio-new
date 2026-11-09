@@ -1,22 +1,32 @@
-import { About } from "@/components/about/About";
-import { ContactForm } from "@/components/contactMe/ContactMe";
-import { CTASection } from "@/components/CTASection/CTASection";
-import Experience from "@/components/experience/Experience";
-import { Footer } from "@/components/footer/Footer";
-import Hero from "@/components/hero/Hero";
-import { Timeline } from "@/components/timeline/Timeline";
+import { setRequestLocale } from "next-intl/server";
+import { CaseStudy } from "@/components/case/CaseStudy";
+import { HeroStage } from "@/components/map/HeroStage";
+import {
+  CareerRoute,
+  NetworkRules,
+  Toolkit,
+} from "@/components/site/Sections";
+import { Terminus } from "@/components/site/Terminus";
+import { LINES } from "@/content/network";
 
-export default function Home() {
+type PageProps = { params: Promise<{ locale: string }> };
+
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
-    <main>
-      <Hero />
-
-      <Experience />
-      <About />
-      <Timeline />
-      <CTASection />
-      <ContactForm />
-      <Footer />
-    </main>
+    <>
+      <main>
+        <HeroStage />
+        {LINES.map((line, index) => (
+          <CaseStudy key={line.id} line={line} flip={index % 2 === 1} />
+        ))}
+        <NetworkRules />
+        <CareerRoute />
+        <Toolkit />
+      </main>
+      <Terminus />
+    </>
   );
 }

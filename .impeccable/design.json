@@ -1,0 +1,640 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T11:24:58.733Z",
+  "title": "Design System: Hamza Alhaj Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "line-red": {
+        "role": "primary",
+        "displayName": "Line 1 Signal Red",
+        "canonical": "oklch(56.9% 0.215 24.5)",
+        "tonalRamp": [
+          "#1c0202",
+          "#4c070b",
+          "#811119",
+          "#bb1b28",
+          "#e54d4c",
+          "#f88982",
+          "#ffbfb9",
+          "#fee9e7"
+        ]
+      },
+      "line-red-on": {
+        "role": "on-primary",
+        "displayName": "On Line 1",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-blue": {
+        "role": "primary",
+        "displayName": "Line 2 Network Blue",
+        "canonical": "oklch(49.3% 0.179 258.4)",
+        "tonalRamp": [
+          "#010a1e",
+          "#042452",
+          "#07418d",
+          "#1861c7",
+          "#5389db",
+          "#87b0ed",
+          "#b7d3fd",
+          "#e5effe"
+        ]
+      },
+      "line-blue-on": {
+        "role": "on-primary",
+        "displayName": "On Line 2",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-magenta": {
+        "role": "primary",
+        "displayName": "Line 3 Route Magenta",
+        "canonical": "oklch(58.4% 0.219 356.3)",
+        "tonalRamp": [
+          "#1b020c",
+          "#480828",
+          "#7b1247",
+          "#b21d69",
+          "#df468c",
+          "#f485b0",
+          "#febbd2",
+          "#ffe7ef"
+        ]
+      },
+      "line-magenta-on": {
+        "role": "on-primary",
+        "displayName": "On Line 3",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-orange": {
+        "role": "primary",
+        "displayName": "Line 4 Junction Orange",
+        "canonical": "oklch(73.4% 0.169 62.0)",
+        "tonalRamp": [
+          "#160700",
+          "#3c1e00",
+          "#663801",
+          "#945403",
+          "#c67100",
+          "#f49329",
+          "#ffc38f",
+          "#ffead9"
+        ]
+      },
+      "line-orange-on": {
+        "role": "on-primary",
+        "displayName": "On Line 4",
+        "canonical": "oklch(19.1% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-green": {
+        "role": "primary",
+        "displayName": "Line 5 Depot Green",
+        "canonical": "oklch(52.4% 0.128 155.7)",
+        "tonalRamp": [
+          "#010f06",
+          "#032f19",
+          "#03532f",
+          "#017a46",
+          "#4f9c6e",
+          "#87bd9a",
+          "#b8dbc3",
+          "#e0f5e7"
+        ]
+      },
+      "line-green-on": {
+        "role": "on-primary",
+        "displayName": "On Line 5",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-purple": {
+        "role": "primary",
+        "displayName": "Line 6 Express Purple",
+        "canonical": "oklch(46.1% 0.198 299.9)",
+        "tonalRamp": [
+          "#0f051e",
+          "#301352",
+          "#55238e",
+          "#7844bc",
+          "#9772d2",
+          "#b89fe7",
+          "#d8c7f9",
+          "#f1ebfe"
+        ]
+      },
+      "line-purple-on": {
+        "role": "on-primary",
+        "displayName": "On Line 6",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "line-brown": {
+        "role": "primary",
+        "displayName": "Line 7 Freight Brown",
+        "canonical": "oklch(51.1% 0.089 62.8)",
+        "tonalRamp": [
+          "#120903",
+          "#36210e",
+          "#5e3c1c",
+          "#8a5a2b",
+          "#a8805c",
+          "#c6a78d",
+          "#e2cdbb",
+          "#f8ece1"
+        ]
+      },
+      "line-brown-on": {
+        "role": "on-primary",
+        "displayName": "On Line 7",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(20.5% 0.010 268.2)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#24262b",
+          "#43454a",
+          "#64666a",
+          "#88898d",
+          "#adaeb1",
+          "#d0d1d3",
+          "#eeeef0"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Mute",
+        "canonical": "oklch(49.2% 0.017 264.4)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#24262b",
+          "#41454c",
+          "#616670",
+          "#858991",
+          "#abaeb4",
+          "#cfd1d5",
+          "#edeef1"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "oklch(90.1% 0.007 268.5)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#262628",
+          "#444547",
+          "#656668",
+          "#88898c",
+          "#acaeb2",
+          "#cfd1d6",
+          "#edeef1"
+        ]
+      },
+      "plate": {
+        "role": "neutral",
+        "displayName": "Plate",
+        "canonical": "oklch(96.1% 0.003 264.5)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262627",
+          "#454546",
+          "#656667",
+          "#88898a",
+          "#adaeaf",
+          "#d0d1d3",
+          "#edeef0"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Enamel White",
+        "canonical": "oklch(100.0% 0.000 0)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#262626",
+          "#454545",
+          "#666666",
+          "#898989",
+          "#aeaeae",
+          "#d1d1d1",
+          "#eeeeee"
+        ]
+      },
+      "error-on-ink": {
+        "role": "error",
+        "displayName": "Error Tint",
+        "canonical": "oklch(84.0% 0.089 13.1)",
+        "tonalRamp": [
+          "#120809",
+          "#342022",
+          "#5a3c3e",
+          "#83595d",
+          "#ae787d",
+          "#dc999f",
+          "#febdc3",
+          "#fee8ea"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The terminus title."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "The one-sentence claim on each line's colour band."
+      },
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "Name and claim in the map's clearing. From 1024px it is 4.2cqw at 1.04; Arabic is 3.7cqw at 1.22."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Rule titles in the network rules list."
+      },
+      "sign": {
+        "displayName": "Sign",
+        "purpose": "The bilingual station sign. Never tracked."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opening paragraph of a case study and the terminus sentence."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "Career stop names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text. Arabic line-height is 1.8."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Buttons and row terms."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Metadata and privacy notes."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small sentence-case headings inside a case study."
+      },
+      "map-label": {
+        "displayName": "Map Label",
+        "purpose": "Station names in sheet units, with a 5px white halo. Scales with the map."
+      }
+    },
+    "shadows": [
+      {
+        "name": "screenshot-frame",
+        "value": "0 0 0 1.5px #15171c",
+        "purpose": "Ink hairline around every screenshot."
+      },
+      {
+        "name": "screenshot-frame-hover",
+        "value": "0 0 0 4px var(--line)",
+        "purpose": "Linked screenshot on hover, in the current line colour."
+      },
+      {
+        "name": "button-outline",
+        "value": "inset 0 0 0 2px #15171c",
+        "purpose": "The secondary action's border."
+      },
+      {
+        "name": "bullet-current",
+        "value": "0 0 0 2px #fff, 0 0 0 4px var(--line)",
+        "purpose": "Header bullet for the case study in view."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-network",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Draw-on and strip fill."
+      },
+      {
+        "name": "draw-on",
+        "value": "1100ms, staggered 80ms per line",
+        "purpose": "Lines draw at load."
+      },
+      {
+        "name": "strip-fill",
+        "value": "1400ms",
+        "purpose": "Strip rail fills on first entry to the viewport."
+      },
+      {
+        "name": "line-isolation",
+        "value": "220ms ease-out",
+        "purpose": "Other lines and stations drop to 0.2 opacity."
+      },
+      {
+        "name": "train",
+        "value": "max(2600ms, path length x 3ms), quadratic ease-in-out",
+        "purpose": "Runs the active line once."
+      },
+      {
+        "name": "cycle-lit",
+        "value": "4400ms",
+        "purpose": "How long the auto-cycle holds a line."
+      },
+      {
+        "name": "cycle-rest",
+        "value": "2600ms",
+        "purpose": "How long the auto-cycle rests on the full network."
+      },
+      {
+        "name": "state",
+        "value": "160ms ease-out",
+        "purpose": "Colour, border and ring changes on controls."
+      },
+      {
+        "name": "bullet-hover",
+        "value": "150ms ease-out, scale 1.1",
+        "purpose": "Header line bullets."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "header-compact",
+        "value": "max-width 359px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "strip-horizontal",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "map-labels-container",
+        "value": "container max-width 1130px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action on the white sheet.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Email me</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 20px; background: var(--ink, #15171c); color: #fff; font-weight: 600; text-decoration: none; transition: background-color 150ms; } .ds-btn-primary:hover { background: #D9202F; } .ds-btn-primary:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The secondary action beside it.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Download CV</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 20px; background: #fff; color: var(--ink, #15171c); font-weight: 600; text-decoration: none; box-shadow: inset 0 0 0 2px var(--ink, #15171c); transition: background-color 150ms, color 150ms; } .ds-btn-outline:hover { background: var(--ink, #15171c); color: #fff; } .ds-btn-outline:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }"
+    },
+    {
+      "name": "Underlined Field on Ink",
+      "kind": "input",
+      "refersTo": "field-on-ink",
+      "description": "Text field used on the ink ground only.",
+      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-field-label\" for=\"ds-name\">Your name</label><input class=\"ds-field\" id=\"ds-name\" /></div>",
+      "css": ".ds-field-wrap { background: var(--ink, #15171c); padding: 24px; color: #fff; } .ds-field-label { font-weight: 600; } .ds-field { display: block; width: 100%; background: transparent; color: #fff; border: 0; border-bottom: 2px solid rgb(255 255 255 / 0.45); border-radius: 0; padding: 10px 0; font: inherit; caret-color: #fff; transition: border-color 160ms ease-out; } .ds-field:hover { border-bottom-color: rgb(255 255 255 / 0.75); } .ds-field:focus { outline: none; border-bottom-color: #fff; }"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "refersTo": "line-bullet-1",
+      "description": "Sticky header with the name, the seven line bullets and the page actions.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#\">Hamza Alhaj</a><ul class=\"ds-nav-lines\"><li><a class=\"ds-bullet ds-current\" style=\"--line:#D9202F;--on-line:#FFFFFF\" href=\"#\">1</a></li><li><a class=\"ds-bullet\" style=\"--line:#0A5BC4;--on-line:#FFFFFF\" href=\"#\">2</a></li><li><a class=\"ds-bullet\" style=\"--line:#D6247F;--on-line:#FFFFFF\" href=\"#\">3</a></li><li><a class=\"ds-bullet\" style=\"--line:#F28C00;--on-line:#141414\" href=\"#\">4</a></li><li><a class=\"ds-bullet\" style=\"--line:#007F49;--on-line:#FFFFFF\" href=\"#\">5</a></li><li><a class=\"ds-bullet\" style=\"--line:#6C2DB3;--on-line:#FFFFFF\" href=\"#\">6</a></li><li><a class=\"ds-bullet\" style=\"--line:#8A5A2B;--on-line:#FFFFFF\" href=\"#\">7</a></li></ul><nav class=\"ds-nav-end\"><a href=\"#\">Email</a><a href=\"#\">CV</a><a href=\"#\" lang=\"ar\">العربية</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 56px; padding-inline: 24px; background: #fff; border-bottom: 2px solid var(--ink, #15171c); color: var(--ink, #15171c); } .ds-nav-name { font-size: 17px; font-weight: 700; color: inherit; text-decoration: none; } .ds-nav-lines { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; } .ds-bullet { display: inline-flex; align-items: center; justify-content: center; width: 1.75em; height: 1.75em; border-radius: 999px; background: var(--line); color: var(--on-line); font-size: 13px; font-weight: 700; line-height: 1; text-decoration: none; transition: transform 150ms ease-out; } .ds-bullet:hover { transform: scale(1.1); } .ds-bullet:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; } .ds-current { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--line); } .ds-nav-end { display: flex; gap: 24px; font-size: 15px; font-weight: 600; } .ds-nav-end a { color: inherit; text-decoration: none; text-underline-offset: 4px; } .ds-nav-end a:hover { text-decoration: underline; }"
+    },
+    {
+      "name": "Line Key Entry",
+      "kind": "chip",
+      "refersTo": "line-bullet-1",
+      "description": "One entry of the index beneath the map; hover, focus and the auto-cycle fill it with its line.",
+      "html": "<a class=\"ds-key\" style=\"--line:#D9202F;--on-line:#FFFFFF;\" href=\"#\"><span class=\"ds-key-bullet\">1</span><span class=\"ds-key-text\">Retail Pro to ZATCA<small>Saudi e-invoicing</small></span></a>",
+      "css": ".ds-key { display: flex; align-items: center; gap: 10px; padding: 12px 18px; color: var(--ink, #15171c); text-decoration: none; transition: background-color 160ms ease-out, color 160ms ease-out; } .ds-key-bullet { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 1.75em; height: 1.75em; border-radius: 999px; background: var(--line); color: var(--on-line); font-size: 15px; font-weight: 700; line-height: 1; } .ds-key-text { font-size: 15px; font-weight: 600; line-height: 1.25; } .ds-key-text small { display: block; font-size: 13px; font-weight: 400; line-height: 1.3; } .ds-key:hover, .ds-key:focus-visible { background: var(--line); color: var(--on-line); outline-offset: -5px; } .ds-key:hover .ds-key-bullet, .ds-key:focus-visible .ds-key-bullet { background: var(--on-line); color: var(--line); }"
+    },
+    {
+      "name": "Station Sign",
+      "kind": "custom",
+      "refersTo": "line-bullet-1",
+      "description": "Bilingual case-study sign. English stays left and Arabic right in both locales.",
+      "html": "<div class=\"ds-sign-band\" style=\"--line:#D9202F;--on-line:#FFFFFF;\"><div class=\"ds-sign\" dir=\"ltr\"><span lang=\"en\">Retail Pro to ZATCA</span><span class=\"ds-sign-rail\" aria-hidden=\"true\"><span class=\"ds-sign-bullet\">1</span></span><span lang=\"ar\" dir=\"rtl\">من Retail Pro إلى زاتكا</span></div></div>",
+      "css": ".ds-sign-band { background: var(--line); color: var(--on-line); padding: 32px 24px; } .ds-sign { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: clamp(20px, 2.1vw, 32px); font-weight: 700; line-height: 1.25; } .ds-sign-rail { position: relative; flex: 1; min-width: 64px; height: 6px; margin-inline: 8px; background: currentColor; } .ds-sign-bullet { position: absolute; left: 50%; top: 50%; display: flex; align-items: center; justify-content: center; width: 2em; height: 2em; border-radius: 999px; background: var(--on-line); color: var(--line); transform: translate(-50%, -50%); }"
+    },
+    {
+      "name": "Strip Diagram",
+      "kind": "custom",
+      "refersTo": "line-bullet-1",
+      "description": "The linear map of one system: stops, a failure-branch stop and a filled terminus.",
+      "html": "<ol class=\"ds-strip\" style=\"--line:#D9202F;--on-line:#FFFFFF;\"><li class=\"ds-stop\"><span class=\"ds-dot\"></span>Sign</li><li class=\"ds-stop ds-exception\"><span class=\"ds-dot\"></span>Submit to ZATCA</li><li class=\"ds-stop ds-terminus\"><span class=\"ds-dot\"></span>Reconcile</li></ol>",
+      "css": ".ds-strip { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; } .ds-strip::before { content: ''; position: absolute; top: 8px; left: 16.66%; right: 16.66%; height: 6px; background: var(--line); } .ds-stop { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; line-height: 1.25; text-align: center; color: var(--ink, #15171c); } .ds-dot { position: relative; width: 22px; height: 22px; box-sizing: border-box; border-radius: 999px; background: #fff; border: 5px solid var(--line); } .ds-terminus .ds-dot { background: var(--line); } .ds-exception .ds-dot { outline: 2px dashed var(--line); outline-offset: 2px; }"
+    },
+    {
+      "name": "Screenshot Frame",
+      "kind": "card",
+      "refersTo": "screenshot-frame",
+      "description": "A real product screen at its native ratio, square-cornered in an ink hairline.",
+      "html": "<a class=\"ds-shot\" style=\"--line:#D9202F;--on-line:#FFFFFF;\" href=\"#\" aria-label=\"Open full image\"><span class=\"ds-shot-img\"></span></a>",
+      "css": ".ds-shot { display: block; overflow: hidden; width: 320px; background: var(--plate, #f1f2f4); box-shadow: 0 0 0 1.5px var(--ink, #15171c); transition: box-shadow 160ms ease-out; } .ds-shot:hover { box-shadow: 0 0 0 4px var(--line, var(--ink, #15171c)); } .ds-shot:focus-visible { outline: 3px solid var(--ink, #15171c); outline-offset: 3px; } .ds-shot-img { display: block; aspect-ratio: 16 / 10; }"
+    },
+    {
+      "name": "Network Grammar",
+      "kind": "custom",
+      "refersTo": "line-bullet-1",
+      "description": "The map's vocabulary: line, station, interchange, terminus, failure branches, held ring and bullet.",
+      "html": "<svg class=\"ds-net\" viewBox=\"0 0 560 140\" role=\"img\" aria-label=\"Network grammar sample\"><path d=\"M40 60 L440 60\" fill=\"none\" stroke=\"#D9202F\" stroke-width=\"8\" stroke-linecap=\"round\"/><path d=\"M200 60 L240 100 L280 60\" fill=\"none\" stroke=\"#D9202F\" stroke-width=\"5\" stroke-dasharray=\"2 11\" stroke-linecap=\"round\"/><circle cx=\"120\" cy=\"60\" r=\"5\" fill=\"#fff\"/><circle cx=\"40\" cy=\"60\" r=\"12\" fill=\"#fff\" stroke=\"#15171c\" stroke-width=\"5\"/><circle cx=\"240\" cy=\"100\" r=\"9.5\" fill=\"#fff\" stroke=\"#D9202F\" stroke-width=\"3\"/><path d=\"M360 60 L400 100\" fill=\"none\" stroke=\"#D9202F\" stroke-width=\"5\" stroke-dasharray=\"2 11\" stroke-linecap=\"round\"/><circle cx=\"400\" cy=\"100\" r=\"9.5\" fill=\"#fff\" stroke=\"#D9202F\" stroke-width=\"3\" stroke-dasharray=\"3 3.4\"/><circle cx=\"440\" cy=\"60\" r=\"9.5\" fill=\"#fff\" stroke=\"#D9202F\" stroke-width=\"5\"/><circle cx=\"488\" cy=\"60\" r=\"16\" fill=\"#D9202F\"/><text x=\"488\" y=\"66.5\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#FFFFFF\">1</text></svg>",
+      "css": ".ds-net { display: block; width: 100%; max-width: 560px; background: #fff; }"
+    },
+    {
+      "name": "Ruled Rows",
+      "kind": "custom",
+      "description": "The system's replacement for cards and tables.",
+      "html": "<dl class=\"ds-rows\"><div class=\"ds-row\"><dt>Frontend</dt><dd>TypeScript, React, Next.js</dd></div><div class=\"ds-row\"><dt>Backend</dt><dd>Node.js, NestJS, .NET</dd></div></dl>",
+      "css": ".ds-rows { margin: 0; border-top: 2px solid var(--ink, #15171c); color: var(--ink, #15171c); } .ds-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2px 24px; padding-block: 12px; border-bottom: 1px solid var(--rule, #dcdee3); } .ds-row dt { font-weight: 600; } .ds-row dd { margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Metro Map of Systems",
+    "overview": "The page is a printed transit sheet. Each project is a line in a full-saturation colour, each stop is a real step in that system, and each dotted branch is a real failure path. Everything else exists to read that network: near-black ink on a white enamel sheet, heavy grotesque type, hairline rules instead of containers, and square-framed screenshots as the only imagery of the work.\n\nThe density changes on purpose. The first viewport is one diagram edge to edge, then each line takes over the full width as a solid colour band, then the system narrows to ruled rows and strip diagrams for the detail. The page ends on the only ink ground in the system, where all seven lines run down into one terminus.\n\nArabic and English are equal readings of one sheet. The map mirrors so that trains run in reading direction, the layout uses logical properties throughout, and the bilingual station sign holds both scripts in every locale.",
+    "keyCharacteristics": [
+      "One white sheet, one near-black ink, seven line colours that own whole bands.",
+      "A single map geometry, authored once on a grid and derived for right-to-left and portrait.",
+      "A fixed station grammar: station, interchange, terminus, dotted failure branch, numbered bullet.",
+      "Flat surfaces, square rectangles, circles reserved for the network.",
+      "One authored motion family, all of it telling the same story of a line lighting up."
+    ],
+    "rules": [
+      {
+        "name": "The One Colour Per System Rule",
+        "body": "A line colour identifies one project. Do not use it to decorate another project's content. Two global hovers borrow from the set and are the only exceptions: the hero Email action fills with Line 1 red, and links and the submit button on the ink ground turn Line 4 orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired On-Colour Rule",
+        "body": "A line colour never appears behind text without its own on-colour. Orange takes the dark on-colour and is never used for text on white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Grounds Rule",
+        "body": "White is the ground for the whole page. Ink becomes a ground only at the terminus, where the lines end.",
+        "section": "colors"
+      },
+      {
+        "name": "The Latin-Only Tracking Rule",
+        "body": "The -0.03em tracking on display type applies only under `:lang(en)`. Arabic display type is always set at 0, because letter-spacing breaks the joins between Arabic letters.",
+        "section": "typography"
+      },
+      {
+        "name": "The Arabic Room Rule",
+        "body": "Arabic gets more leading than Latin: 1.8 for body against 1.6, 1.3 for tracked display against about 1.05, and 1.22 for the hero, whose size also drops from 4.2cqw to 3.7cqw.",
+        "section": "typography"
+      },
+      {
+        "name": "The Catch-All Fallback Rule",
+        "body": "`adjustFontFallback` stays false on both fonts. The generated metric fallback is a catch-all Arial with no script range, which sits ahead of Alexandria in the stack and swallows every Arabic glyph. With it off, Arabic falls through to Alexandria as the page intends.",
+        "section": "typography"
+      },
+      {
+        "name": "The Single Sheet Rule",
+        "body": "The map is authored once, left-to-right and landscape. Arabic and portrait are derived from it by calculation: transpose first, then mirror x against the view width. Label sides flip with the mirror. Never draw a second geometry.",
+        "section": "layout"
+      },
+      {
+        "name": "The Octilinear Rule",
+        "body": "Every map segment is horizontal, vertical or a true 45-degree diagonal. New stops go on the grid.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Enamel Rule",
+        "body": "A shadow here is a ring: no offset, no blur.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Sheet Rule",
+        "body": "If it is a surface it has square corners; if it is round it is part of the network.",
+        "section": "shapes"
+      },
+      {
+        "name": "The One Motion Rule",
+        "body": "The network is the only thing that moves: line isolation, the train, the draw-on of the lines at load, and the strip fill. There are no scroll reveals, parallax or entrance effects on text or images. Everything else is a state transition of 150 to 220ms.",
+        "section": "components"
+      },
+      {
+        "name": "The Fixed Sign Rule",
+        "body": "English stays left and Arabic stays right in both locales, as a physical sign does. Each name carries its own `lang` and `dir`, and the current locale's name is the heading. Below 768px the sign stacks with the reader's language first, then the rail, then the other script.",
+        "section": "components"
+      },
+      {
+        "name": "The Dash Means Failure Rule",
+        "body": "Dotted and dashed marks belong to the failure family and nothing else: failure branches and held rings on the map, the dashed outline on strip stops, and the dashed bullet in the When It Goes Wrong list.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do keep each line's colour paired with its on-colour through `--line` and `--on-line`.",
+      "Do add a new project as a new line on the grid, with stops and failure branches that are real.",
+      "Do place every map point on the 40 by 21.5 sheet and let the code mirror and transpose it.",
+      "Do set the Latin -0.03em tracking through `:lang(en)` only, and give Arabic its own leading.",
+      "Do keep `adjustFontFallback` false on Schibsted Grotesk and Alexandria.",
+      "Do frame screenshots with the 1.5px ink ring at square corners and native ratio.",
+      "Do keep English left and Arabic right on station signs in both locales.",
+      "Do use ruled rows for structured detail.",
+      "Do honour reduced motion for anything that moves."
+    ],
+    "donts": [
+      "Don't add card surfaces, gradients or monospace type; the world has none.",
+      "Don't open on a dark hero, set the name in a gradient, or show a grid of technology icons.",
+      "Don't present the career as alternating timeline cards; it is a line with stops.",
+      "Don't letter-space Arabic.",
+      "Don't add a line colour without adding a line, or borrow one as general decoration.",
+      "Don't set text in Line 4 orange on white.",
+      "Don't use dots or dashes for anything other than failure paths.",
+      "Don't use a shadow with blur or offset, or round a rectangular surface.",
+      "Don't draw separate maps for Arabic or portrait.",
+      "Don't add motion outside the network."
+    ]
+  }
+}

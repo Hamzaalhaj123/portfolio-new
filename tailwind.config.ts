@@ -9,7 +9,14 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-latin)', 'var(--font-arabic)', 'system-ui', 'sans-serif']
+  		},
   		colors: {
+  			ink: 'var(--ink)',
+  			mute: 'var(--mute)',
+  			rule: 'var(--rule)',
+  			plate: 'var(--plate)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
