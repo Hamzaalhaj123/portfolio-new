@@ -82,7 +82,7 @@ export default function Hero() {
 
             <a
               href="/cv.pdf"
-              download
+              download="Hamza Alhaj CV.pdf"
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-white/10 to-white/5 hover:from-white/15 hover:to-white/10 rounded-lg border border-white/10 hover:border-emerald-400/30 transition-all group"
             >
               <Download className="w-5 h-5 group-hover:text-emerald-400 transition-colors" />
