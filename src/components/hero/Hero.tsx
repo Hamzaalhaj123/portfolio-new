@@ -46,7 +46,7 @@ export default function Hero() {
         </div>
 
         <Link
-          href={"#timeline"}
+          href={"#projects"}
           className="mt-8 px-8 py-3 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-emerald-500/20 "
         >
           <span className=" flex items-center gap-2">

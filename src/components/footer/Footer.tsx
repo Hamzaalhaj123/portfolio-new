@@ -22,7 +22,7 @@ export const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground">Explore</h4>
             <nav className="flex flex-col space-y-2">
               <FooterLink href="#about">About</FooterLink>
-              <FooterLink href="#timeline">Journey</FooterLink>
+              <FooterLink href="#projects">Journey</FooterLink>
               <FooterLink href="#projects">Work</FooterLink>
               <FooterLink href="#contact">Contact</FooterLink>
             </nav>
